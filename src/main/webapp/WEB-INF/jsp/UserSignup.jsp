@@ -121,24 +121,23 @@
         <div id="content" class="row clearfix">
             <div class="right">
 
-                <form role="form-register" class="form-register" method="get" action="">
+                <form role="form-register" class="form-register" method="post" action="UserSignup">
                     <!--<h4 class="form-register-header">-->
                     <!--免费开通五邑大学招聘系统账号：-->
                     <!--</h4>-->
                     <div class="form-group">
-                        <label for="email">注册邮箱：</label><input class="form-control" id="email" type="email"
-                                                               required="required"/>
+                        <label for="realName">用户名：</label><input class="form-control" id="realName"  name="userName" required="required"/>
                     </div>
                     <div class="form-group">
                         <label for="PSW">创建密码：</label><input class="form-control" id="PSW" type="password"
-                                                             required="required"/>
+                                                             required="required" name="passwd"/>
                     </div>
                     <div class="form-group">
                         <label for="sencondPSW">确认密码：</label><input class="form-control" id="sencondPSW" type="password"
                                                                     required="required"/>
                     </div>
                     <div class="form-group">
-                        <label for="realName">真实姓名：</label><input class="form-control" id="realName" type="email"/>
+                        <label for="email">注册邮箱：</label><input class="form-control" id="email" type="email" name="email"/>
                     </div>
                     <div class="form-group">
                         <label for="sex">性别：</label><input class="form-control" id="sex" type="password"/>
@@ -146,7 +145,7 @@
                     <div class="form-group">
                         <label for="birthday">生日：</label><input class="form-control" id="birthday" type="email"/>
                     </div>
-                    <button type="submit" class="btn btn-success btn-register">立即注册</button>
+                    <button type="submit" class="btn btn-success btn-register" >立即注册</button>
                 </form>
 
             </div>

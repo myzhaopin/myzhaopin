@@ -129,14 +129,14 @@
 </nav>
 
 <div class="container" align="center">
-    <form name="loginForm" class="form-signin" action="" method="post">
+    <form name="loginForm" class="form-signin" action="UserLogin" method="post">
         <h3 class="form-signin-heading"><span class="glyphicon glyphicon-user" aria-hidden="false"></span>请登录</h3>
 
-        <label for="inputEmail" class="sr-only">电子邮件</label>
-        <input type="email" id="inputEmail" name="username" class="form-control" placeholder="电子邮件" required autofocus>
+        <label for="inputEmail" class="sr-only">用户名</label>
+        <input type="text" id="inputEmail" name="userName" class="form-control" placeholder="用户名" required autofocus>
 
         <label for="inputPassword" class="sr-only">密码</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="密码" required>
+        <input type="password" id="inputPassword" name="passwd" class="form-control" placeholder="密码" required>
         <a href="Companylogin.jsp" class="Companylogin">切换到公司登陆</a><div>&nbsp</div>
         <%--<div>--%>
             <%--<s:fielderror/>--%>
