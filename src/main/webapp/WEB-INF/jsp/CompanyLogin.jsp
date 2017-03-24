@@ -124,14 +124,14 @@
 </nav>
 
 <div class="container" align="center">
-    <form name="loginForm" class="form-signin" action="" method="post">
+    <form name="loginForm" class="form-signin" action="CompanyLogin" method="post">
         <h3 class="form-signin-heading"><span class="glyphicon glyphicon-user" aria-hidden="false"></span>请登录</h3>
 
-        <label for="inputEmail" class="sr-only">电子邮件</label>
-        <input type="email" id="inputEmail" name="username" class="form-control" placeholder="电子邮件" required autofocus>
+        <label for="inputEmail" class="sr-only">登录账号</label>
+        <input type="text" id="inputEmail" name="account" class="form-control" placeholder="登录账号" required autofocus>
 
         <label for="inputPassword" class="sr-only">密码</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="密码" required>
+        <input type="password" id="inputPassword" name="passwd" class="form-control" placeholder="密码" required>
 
         <a href="Users_login.jsp" class="personLogin">切换到个人登陆</a><div>&nbsp</div>
         <div class="bbutton">
