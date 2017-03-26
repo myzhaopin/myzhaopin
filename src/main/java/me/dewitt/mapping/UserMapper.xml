@@ -8,7 +8,7 @@
     <result column="sex" property="sex" jdbcType="CHAR" />
     <result column="phone_num" property="phoneNum" jdbcType="VARCHAR" />
     <result column="email" property="email" jdbcType="VARCHAR" />
-    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="birthday" property="birthday" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -107,7 +107,7 @@
       birthday)
     values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{passwd,jdbcType=VARCHAR}, 
       #{sex,jdbcType=CHAR}, #{phoneNum,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
-      #{birthday,jdbcType=TIMESTAMP})
+      #{birthday,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="me.dewitt.pojo.User" >
     insert into t_user
@@ -154,7 +154,7 @@
         #{email,jdbcType=VARCHAR},
       </if>
       <if test="birthday != null" >
-        #{birthday,jdbcType=TIMESTAMP},
+        #{birthday,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -186,7 +186,7 @@
         email = #{record.email,jdbcType=VARCHAR},
       </if>
       <if test="record.birthday != null" >
-        birthday = #{record.birthday,jdbcType=TIMESTAMP},
+        birthday = #{record.birthday,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -201,7 +201,7 @@
       sex = #{record.sex,jdbcType=CHAR},
       phone_num = #{record.phoneNum,jdbcType=VARCHAR},
       email = #{record.email,jdbcType=VARCHAR},
-      birthday = #{record.birthday,jdbcType=TIMESTAMP}
+      birthday = #{record.birthday,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -225,7 +225,7 @@
         email = #{email,jdbcType=VARCHAR},
       </if>
       <if test="birthday != null" >
-        birthday = #{birthday,jdbcType=TIMESTAMP},
+        birthday = #{birthday,jdbcType=VARCHAR},
       </if>
     </set>
     where user_id = #{userId,jdbcType=INTEGER}
@@ -237,7 +237,7 @@
       sex = #{sex,jdbcType=CHAR},
       phone_num = #{phoneNum,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
-      birthday = #{birthday,jdbcType=TIMESTAMP}
+      birthday = #{birthday,jdbcType=VARCHAR}
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
 </mapper>

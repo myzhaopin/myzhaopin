@@ -1,7 +1,5 @@
 package me.dewitt.pojo;
 
-import java.util.Date;
-
 public class JobApply {
     private Integer jobId;
 
@@ -17,7 +15,7 @@ public class JobApply {
 
     private String sex;
 
-    private Date birthday;
+    private String birthday;
 
     private String email;
 
@@ -87,12 +85,12 @@ public class JobApply {
         this.sex = sex == null ? null : sex.trim();
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setBirthday(String birthday) {
+        this.birthday = birthday == null ? null : birthday.trim();
     }
 
     public String getEmail() {

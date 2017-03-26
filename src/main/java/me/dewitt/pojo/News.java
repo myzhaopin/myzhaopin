@@ -1,7 +1,5 @@
 package me.dewitt.pojo;
 
-import java.util.Date;
-
 public class News {
     private Integer idNews;
 
@@ -9,7 +7,7 @@ public class News {
 
     private String content;
 
-    private Date date;
+    private String date;
 
     private Integer adminId;
 
@@ -39,12 +37,12 @@ public class News {
         this.content = content == null ? null : content.trim();
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate(String date) {
+        this.date = date == null ? null : date.trim();
     }
 
     public Integer getAdminId() {

@@ -7,7 +7,7 @@
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="salary" property="salary" jdbcType="INTEGER" />
     <result column="verify" property="verify" jdbcType="BIT" />
-    <result column="date" property="date" jdbcType="TIMESTAMP" />
+    <result column="date" property="date" jdbcType="VARCHAR" />
     <result column="industry_name" property="industryName" jdbcType="VARCHAR" />
     <result column="company_name" property="companyName" jdbcType="VARCHAR" />
     <result column="location" property="location" jdbcType="VARCHAR" />
@@ -118,13 +118,13 @@
   </delete>
   <insert id="insert" parameterType="me.dewitt.pojo.JobDetailWithBLOBs" >
     insert into v_job_detail (job_id, company_id, title, 
-      salary, verify, date, 
-      industry_name, company_name, location, 
-      information, introdution)
+      salary, verify, date, industry_name, 
+      company_name, location, information, 
+      introdution)
     values (#{jobId,jdbcType=INTEGER}, #{companyId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, 
-      #{salary,jdbcType=INTEGER}, #{verify,jdbcType=BIT}, #{date,jdbcType=TIMESTAMP}, 
-      #{industryName,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, #{location,jdbcType=VARCHAR}, 
-      #{information,jdbcType=LONGVARCHAR}, #{introdution,jdbcType=LONGVARCHAR})
+      #{salary,jdbcType=INTEGER}, #{verify,jdbcType=BIT}, #{date,jdbcType=VARCHAR}, #{industryName,jdbcType=VARCHAR}, 
+      #{companyName,jdbcType=VARCHAR}, #{location,jdbcType=VARCHAR}, #{information,jdbcType=LONGVARCHAR}, 
+      #{introdution,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="me.dewitt.pojo.JobDetailWithBLOBs" >
     insert into v_job_detail
@@ -180,7 +180,7 @@
         #{verify,jdbcType=BIT},
       </if>
       <if test="date != null" >
-        #{date,jdbcType=TIMESTAMP},
+        #{date,jdbcType=VARCHAR},
       </if>
       <if test="industryName != null" >
         #{industryName,jdbcType=VARCHAR},
@@ -224,7 +224,7 @@
         verify = #{record.verify,jdbcType=BIT},
       </if>
       <if test="record.date != null" >
-        date = #{record.date,jdbcType=TIMESTAMP},
+        date = #{record.date,jdbcType=VARCHAR},
       </if>
       <if test="record.industryName != null" >
         industry_name = #{record.industryName,jdbcType=VARCHAR},
@@ -253,7 +253,7 @@
       title = #{record.title,jdbcType=VARCHAR},
       salary = #{record.salary,jdbcType=INTEGER},
       verify = #{record.verify,jdbcType=BIT},
-      date = #{record.date,jdbcType=TIMESTAMP},
+      date = #{record.date,jdbcType=VARCHAR},
       industry_name = #{record.industryName,jdbcType=VARCHAR},
       company_name = #{record.companyName,jdbcType=VARCHAR},
       location = #{record.location,jdbcType=VARCHAR},
@@ -270,7 +270,7 @@
       title = #{record.title,jdbcType=VARCHAR},
       salary = #{record.salary,jdbcType=INTEGER},
       verify = #{record.verify,jdbcType=BIT},
-      date = #{record.date,jdbcType=TIMESTAMP},
+      date = #{record.date,jdbcType=VARCHAR},
       industry_name = #{record.industryName,jdbcType=VARCHAR},
       company_name = #{record.companyName,jdbcType=VARCHAR},
       location = #{record.location,jdbcType=VARCHAR}

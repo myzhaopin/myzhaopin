@@ -5,7 +5,7 @@
     <id column="id_news" property="idNews" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="content" property="content" jdbcType="VARCHAR" />
-    <result column="date" property="date" jdbcType="TIMESTAMP" />
+    <result column="date" property="date" jdbcType="VARCHAR" />
     <result column="admin_id" property="adminId" jdbcType="INTEGER" />
     <result column="image" property="image" jdbcType="VARCHAR" />
   </resultMap>
@@ -105,7 +105,7 @@
       date, admin_id, image
       )
     values (#{idNews,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
-      #{date,jdbcType=TIMESTAMP}, #{adminId,jdbcType=INTEGER}, #{image,jdbcType=VARCHAR}
+      #{date,jdbcType=VARCHAR}, #{adminId,jdbcType=INTEGER}, #{image,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="me.dewitt.pojo.News" >
@@ -141,7 +141,7 @@
         #{content,jdbcType=VARCHAR},
       </if>
       <if test="date != null" >
-        #{date,jdbcType=TIMESTAMP},
+        #{date,jdbcType=VARCHAR},
       </if>
       <if test="adminId != null" >
         #{adminId,jdbcType=INTEGER},
@@ -170,7 +170,7 @@
         content = #{record.content,jdbcType=VARCHAR},
       </if>
       <if test="record.date != null" >
-        date = #{record.date,jdbcType=TIMESTAMP},
+        date = #{record.date,jdbcType=VARCHAR},
       </if>
       <if test="record.adminId != null" >
         admin_id = #{record.adminId,jdbcType=INTEGER},
@@ -188,7 +188,7 @@
     set id_news = #{record.idNews,jdbcType=INTEGER},
       title = #{record.title,jdbcType=VARCHAR},
       content = #{record.content,jdbcType=VARCHAR},
-      date = #{record.date,jdbcType=TIMESTAMP},
+      date = #{record.date,jdbcType=VARCHAR},
       admin_id = #{record.adminId,jdbcType=INTEGER},
       image = #{record.image,jdbcType=VARCHAR}
     <if test="_parameter != null" >
@@ -205,7 +205,7 @@
         content = #{content,jdbcType=VARCHAR},
       </if>
       <if test="date != null" >
-        date = #{date,jdbcType=TIMESTAMP},
+        date = #{date,jdbcType=VARCHAR},
       </if>
       <if test="adminId != null" >
         admin_id = #{adminId,jdbcType=INTEGER},
@@ -220,7 +220,7 @@
     update t_news
     set title = #{title,jdbcType=VARCHAR},
       content = #{content,jdbcType=VARCHAR},
-      date = #{date,jdbcType=TIMESTAMP},
+      date = #{date,jdbcType=VARCHAR},
       admin_id = #{adminId,jdbcType=INTEGER},
       image = #{image,jdbcType=VARCHAR}
     where id_news = #{idNews,jdbcType=INTEGER}

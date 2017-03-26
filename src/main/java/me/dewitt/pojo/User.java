@@ -1,7 +1,5 @@
 package me.dewitt.pojo;
 
-import java.util.Date;
-
 public class User {
     private Integer userId;
 
@@ -15,7 +13,7 @@ public class User {
 
     private String email;
 
-    private Date birthday;
+    private String birthday;
 
     public Integer getUserId() {
         return userId;
@@ -65,11 +63,11 @@ public class User {
         this.email = email == null ? null : email.trim();
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setBirthday(String birthday) {
+        this.birthday = birthday == null ? null : birthday.trim();
     }
 }

@@ -155,22 +155,11 @@
                                     <td height="10" colspan="4"></td>
                                 </tr>
 
-                                <tr>
-                                    <td width="20" height="40" align="center" class="text_red">*</td>
-                                    <td width="100" height="40" align="left" class="text_cray1">登录名：</td>
-                                    <td width="350" align="left" class="text_cray"><%= user.getUsername() %></td>
-                                    <td width="230" rowspan="5" align="center" background="images/bg_point_write.gif"
-                                        class="text_cray">
-                                        <img src="images/photo.jpg" width="139" height="139">
-                                        <div></div>
-                                        <input type="button" class="btn-default btn-info upload" onclick="" value="上传"/>
-                                    </td>
-
-                                </tr>
+                               
                                 <tr>
                                     <td width="20" height="40" align="center" class="text_red">*</td>
                                     <td width="100" height="40" align="left" class="text_cray1">真实姓名：</td>
-                                    <td align="left" class="text_cray"><%= user.getRealname() %></td>
+                                    <td align="left" class="text_cray">${resume.name}</td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40" align="center" class="text_red">*</td>
@@ -183,86 +172,71 @@
                                 <tr>
                                     <td width="20" height="40" align="center" class="text_red">*</td>
                                     <td width="100" height="40" align="left" class="text_cray1">工作年龄：</td>
-                                    <td align="left" class="text_cray"><%=
-                                    user.getCity().getProvince().getProvince()%>
+                                    <td align="left" class="text_cray">${resume.workAge}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40" align="center" class="text_red">*</td>
                                     <td width="100" height="40" align="left" class="text_cray1">生日：</td>
-                                    <td align="left" class="text_cray"><%= user.getCity().getCity() %></td>
+                                    <td align="left" class="text_cray">${resume.birthday}</td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40" align="center" class="text_red">*</td>
                                     <td width="100" height="40" align="left" class="text_cray1">居住地：</td>
-                                    <td colspan="2" align="left" class="text_cray"><%=
-                                    user.getCertType().getContent()%>
+                                    <td colspan="2" align="left" class="text_cray">${resume.location}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40" align="center" class="text_red">*</td>
                                     <td width="100" height="40" align="left" class="text_cray1">手机号码：</td>
-                                    <td colspan="2" align="left" class="text_cray"><%= user.getCert() %></td>
+                                    <td colspan="2" align="left" class="text_cray">${resume.phoneNum}</td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40" align="center" class="text_red">*</td>
                                     <td width="100" height="40" align="left" class="text_cray1">邮箱：</td>
-                                    <td colspan="2" align="left" class="text_cray"><%= new
-                                            SimpleDateFormat("yyyy-MM-dd").format(user.getBirthday()) %>
+                                    <td colspan="2" align="left" class="text_cray">${resume.email}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40"></td>
                                     <td width="100" height="40" align="left" class="text_cray1">职业：</td>
-                                    <td colspan="3" align="left" class="text_cray"><%=
-                                    user.getUserType().getContent()%>
+                                    <td colspan="3" align="left" class="text_cray">${resume.profession}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40"></td>
                                     <td width="100" height="40" align="left" class="text_cray1">工作经验：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray">撒的发生打阿斯蒂芬发都发法神发生都发
-                                        撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发
-                                        撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发
-                                        撒的发生打阿斯蒂芬发都发法神发生都发 >
+                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.workExperience}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40"></td>
                                     <td width="100" height="40" align="left" class="text_cray1">项目经验：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray">撒的发生打阿斯蒂芬发都发法神发生都发
-                                        撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发
-                                        撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发 撒的发生打阿斯蒂芬发都发法神发生都发
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40"></td>
-                                    <td width="100" height="40" align="left" class="text_cray1">项目经验：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray"><%= user.getContent()%>
+                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.projectExperience}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40"></td>
                                     <td width="100" height="40" align="left" class="text_cray1">教育情况：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray"><%= user.getContent()%>
+                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.educationExperience}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40"></td>
                                     <td width="100" height="40" align="left" class="text_cray1">在校情况：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray"><%= user.getContent()%>
+                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.graduteInfo}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40"></td>
                                     <td width="100" height="40" align="left" class="text_cray1">技能特长：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray"><%= user.getContent()%>
+                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.skillsSpeciality}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="20" height="40"></td>
                                     <td width="100" height="40" align="left" class="text_cray1">附加信息：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray"><%= user.getContent()%>
+                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.additionalInfo}
                                     </td>
                                 </tr>
                                 <tr>

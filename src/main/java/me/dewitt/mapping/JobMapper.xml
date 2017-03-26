@@ -7,7 +7,7 @@
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="salary" property="salary" jdbcType="INTEGER" />
     <result column="verify" property="verify" jdbcType="BIT" />
-    <result column="date" property="date" jdbcType="TIMESTAMP" />
+    <result column="date" property="date" jdbcType="VARCHAR" />
     <result column="industry_name" property="industryName" jdbcType="VARCHAR" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="me.dewitt.pojo.Job" extends="BaseResultMap" >
@@ -127,11 +127,11 @@
   </delete>
   <insert id="insert" parameterType="me.dewitt.pojo.Job" >
     insert into t_job (job_id, company_id, title, 
-      salary, verify, date, 
-      industry_name, information)
+      salary, verify, date, industry_name, 
+      information)
     values (#{jobId,jdbcType=INTEGER}, #{companyId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, 
-      #{salary,jdbcType=INTEGER}, #{verify,jdbcType=BIT}, #{date,jdbcType=TIMESTAMP}, 
-      #{industryName,jdbcType=VARCHAR}, #{information,jdbcType=LONGVARCHAR})
+      #{salary,jdbcType=INTEGER}, #{verify,jdbcType=BIT}, #{date,jdbcType=VARCHAR}, #{industryName,jdbcType=VARCHAR}, 
+      #{information,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="me.dewitt.pojo.Job" >
     insert into t_job
@@ -178,7 +178,7 @@
         #{verify,jdbcType=BIT},
       </if>
       <if test="date != null" >
-        #{date,jdbcType=TIMESTAMP},
+        #{date,jdbcType=VARCHAR},
       </if>
       <if test="industryName != null" >
         #{industryName,jdbcType=VARCHAR},
@@ -213,7 +213,7 @@
         verify = #{record.verify,jdbcType=BIT},
       </if>
       <if test="record.date != null" >
-        date = #{record.date,jdbcType=TIMESTAMP},
+        date = #{record.date,jdbcType=VARCHAR},
       </if>
       <if test="record.industryName != null" >
         industry_name = #{record.industryName,jdbcType=VARCHAR},
@@ -233,7 +233,7 @@
       title = #{record.title,jdbcType=VARCHAR},
       salary = #{record.salary,jdbcType=INTEGER},
       verify = #{record.verify,jdbcType=BIT},
-      date = #{record.date,jdbcType=TIMESTAMP},
+      date = #{record.date,jdbcType=VARCHAR},
       industry_name = #{record.industryName,jdbcType=VARCHAR},
       information = #{record.information,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
@@ -247,7 +247,7 @@
       title = #{record.title,jdbcType=VARCHAR},
       salary = #{record.salary,jdbcType=INTEGER},
       verify = #{record.verify,jdbcType=BIT},
-      date = #{record.date,jdbcType=TIMESTAMP},
+      date = #{record.date,jdbcType=VARCHAR},
       industry_name = #{record.industryName,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -269,7 +269,7 @@
         verify = #{verify,jdbcType=BIT},
       </if>
       <if test="date != null" >
-        date = #{date,jdbcType=TIMESTAMP},
+        date = #{date,jdbcType=VARCHAR},
       </if>
       <if test="industryName != null" >
         industry_name = #{industryName,jdbcType=VARCHAR},
@@ -286,7 +286,7 @@
       title = #{title,jdbcType=VARCHAR},
       salary = #{salary,jdbcType=INTEGER},
       verify = #{verify,jdbcType=BIT},
-      date = #{date,jdbcType=TIMESTAMP},
+      date = #{date,jdbcType=VARCHAR},
       industry_name = #{industryName,jdbcType=VARCHAR},
       information = #{information,jdbcType=LONGVARCHAR}
     where job_id = #{jobId,jdbcType=INTEGER}
@@ -297,7 +297,7 @@
       title = #{title,jdbcType=VARCHAR},
       salary = #{salary,jdbcType=INTEGER},
       verify = #{verify,jdbcType=BIT},
-      date = #{date,jdbcType=TIMESTAMP},
+      date = #{date,jdbcType=VARCHAR},
       industry_name = #{industryName,jdbcType=VARCHAR}
     where job_id = #{jobId,jdbcType=INTEGER}
   </update>

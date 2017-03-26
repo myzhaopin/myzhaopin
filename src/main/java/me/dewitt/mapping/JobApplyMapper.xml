@@ -9,7 +9,7 @@
     <result column="work_age" property="workAge" jdbcType="INTEGER" />
     <result column="location" property="location" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="CHAR" />
-    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="birthday" property="birthday" jdbcType="VARCHAR" />
     <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="phone_num" property="phoneNum" jdbcType="VARCHAR" />
     <result column="profession" property="profession" jdbcType="VARCHAR" />
@@ -138,7 +138,7 @@
       additional_info)
     values (#{jobId,jdbcType=INTEGER}, #{resumeId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
       #{icon,jdbcType=VARCHAR}, #{workAge,jdbcType=INTEGER}, #{location,jdbcType=VARCHAR}, 
-      #{sex,jdbcType=CHAR}, #{birthday,jdbcType=TIMESTAMP}, #{email,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=CHAR}, #{birthday,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
       #{phoneNum,jdbcType=VARCHAR}, #{profession,jdbcType=VARCHAR}, #{hide,jdbcType=BIT}, 
       #{userId,jdbcType=INTEGER}, #{industryName,jdbcType=VARCHAR}, #{workExperience,jdbcType=LONGVARCHAR}, 
       #{projectExperience,jdbcType=LONGVARCHAR}, #{educationExperience,jdbcType=LONGVARCHAR}, 
@@ -232,7 +232,7 @@
         #{sex,jdbcType=CHAR},
       </if>
       <if test="birthday != null" >
-        #{birthday,jdbcType=TIMESTAMP},
+        #{birthday,jdbcType=VARCHAR},
       </if>
       <if test="email != null" >
         #{email,jdbcType=VARCHAR},
@@ -303,7 +303,7 @@
         sex = #{record.sex,jdbcType=CHAR},
       </if>
       <if test="record.birthday != null" >
-        birthday = #{record.birthday,jdbcType=TIMESTAMP},
+        birthday = #{record.birthday,jdbcType=VARCHAR},
       </if>
       <if test="record.email != null" >
         email = #{record.email,jdbcType=VARCHAR},
@@ -355,7 +355,7 @@
       work_age = #{record.workAge,jdbcType=INTEGER},
       location = #{record.location,jdbcType=VARCHAR},
       sex = #{record.sex,jdbcType=CHAR},
-      birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      birthday = #{record.birthday,jdbcType=VARCHAR},
       email = #{record.email,jdbcType=VARCHAR},
       phone_num = #{record.phoneNum,jdbcType=VARCHAR},
       profession = #{record.profession,jdbcType=VARCHAR},
@@ -381,7 +381,7 @@
       work_age = #{record.workAge,jdbcType=INTEGER},
       location = #{record.location,jdbcType=VARCHAR},
       sex = #{record.sex,jdbcType=CHAR},
-      birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      birthday = #{record.birthday,jdbcType=VARCHAR},
       email = #{record.email,jdbcType=VARCHAR},
       phone_num = #{record.phoneNum,jdbcType=VARCHAR},
       profession = #{record.profession,jdbcType=VARCHAR},

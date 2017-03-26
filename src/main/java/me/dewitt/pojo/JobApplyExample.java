@@ -1,7 +1,6 @@
 package me.dewitt.pojo;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class JobApplyExample {
@@ -575,52 +574,62 @@ public class JobApplyExample {
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayEqualTo(Date value) {
+        public Criteria andBirthdayEqualTo(String value) {
             addCriterion("birthday =", value, "birthday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayNotEqualTo(Date value) {
+        public Criteria andBirthdayNotEqualTo(String value) {
             addCriterion("birthday <>", value, "birthday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayGreaterThan(Date value) {
+        public Criteria andBirthdayGreaterThan(String value) {
             addCriterion("birthday >", value, "birthday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayGreaterThanOrEqualTo(Date value) {
+        public Criteria andBirthdayGreaterThanOrEqualTo(String value) {
             addCriterion("birthday >=", value, "birthday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayLessThan(Date value) {
+        public Criteria andBirthdayLessThan(String value) {
             addCriterion("birthday <", value, "birthday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayLessThanOrEqualTo(Date value) {
+        public Criteria andBirthdayLessThanOrEqualTo(String value) {
             addCriterion("birthday <=", value, "birthday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayIn(List<Date> values) {
+        public Criteria andBirthdayLike(String value) {
+            addCriterion("birthday like", value, "birthday");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthdayNotLike(String value) {
+            addCriterion("birthday not like", value, "birthday");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthdayIn(List<String> values) {
             addCriterion("birthday in", values, "birthday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayNotIn(List<Date> values) {
+        public Criteria andBirthdayNotIn(List<String> values) {
             addCriterion("birthday not in", values, "birthday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayBetween(Date value1, Date value2) {
+        public Criteria andBirthdayBetween(String value1, String value2) {
             addCriterion("birthday between", value1, value2, "birthday");
             return (Criteria) this;
         }
 
-        public Criteria andBirthdayNotBetween(Date value1, Date value2) {
+        public Criteria andBirthdayNotBetween(String value1, String value2) {
             addCriterion("birthday not between", value1, value2, "birthday");
             return (Criteria) this;
         }

@@ -1,7 +1,5 @@
 package me.dewitt.pojo;
 
-import java.util.Date;
-
 public class Job {
     private Integer jobId;
 
@@ -13,7 +11,7 @@ public class Job {
 
     private Boolean verify;
 
-    private Date date;
+    private String date;
 
     private String industryName;
 
@@ -59,12 +57,12 @@ public class Job {
         this.verify = verify;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate(String date) {
+        this.date = date == null ? null : date.trim();
     }
 
     public String getIndustryName() {
