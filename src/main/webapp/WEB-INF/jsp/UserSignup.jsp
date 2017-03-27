@@ -9,7 +9,7 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <!--<link rel="icon" href="images/favicon.ico">-->
+    <link rel="icon" href="images/favicon.ico">
 
     <title>注册</title>
 
@@ -51,14 +51,6 @@
             background-color: #f8fdff;
         }
 
-        .left {
-            width: 230px;
-            background: url(images/left.png) left top repeat #f8fdff;
-            height: 650px;
-            float: left;
-            padding-top: 30px;
-        }
-
         .right {
             background: url(images/right_1600.png) right top no-repeat #f8fdff;
         }
@@ -72,32 +64,17 @@
             width: 100%;
         }
 
-        .left a.nav_box span.dt {
-            font-size: 20px;
-            font-family: '微软雅黑';
-            line-height: 26px;
-            padding-left: 30px;
-            height: 26px;
-        }
-
         .left a.cur span {
             display: block;
             color: #fff;
         }
 
-        .left a.nav_box span.dd {
-            line-height: 16px;
-            height: 16px;
-            padding-top: 10px;
-            display: block;
-        }
-
-        .left a.cur span.nav_2{
-            background:url(images/index_icon_1.png) 0 -48px no-repeat;
-        }
-
         .left a.nav_box span{
             color: #616c72;
+        }
+
+        .footer{
+            text-align: center;
         }
 
     </style>
@@ -154,7 +131,7 @@
     </div>
 </div>
 
-<footer class="panel-footer">
+<footer class="panel-footer footer">
     <!-- Footnotes -->
     <div id="wyu-footer-column">
         <!-- Toolbar -->

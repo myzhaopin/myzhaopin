@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
@@ -10,7 +9,7 @@
     <meta name="author" content="">
     <!--<link rel="icon" href="images/favicon.ico">-->
 
-    <title>我的简历详情</title>
+    <title>我的基本资料</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -100,11 +99,11 @@
     <div>
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
-                <img alt="Brand" src="imagesBackup/favicon.ico">
+                <img alt="Brand" src="images/favicon.ico">
             </a>
         </div>
         <div class="nav navbar-nav">
-            <h3>我的简历</h3>
+            <h3>我的基本信息</h3>
         </div>
         <div>
             <ul class="nav navbar-nav navbar-right">
@@ -137,7 +136,7 @@
                     <tr>
                         <td width="64" align="center"></td>
                         <td width="771" height="30" align="left" valign="top"><span
-                                class="text_blod_title">查看个人信息</span></td>
+                                class="text_blod_title">查看个人基本资料</span></td>
                     </tr>
                     <tr>
                         <td height="15" colspan="2"><img src="images/line1.jpg" width="835" height="6"></td>
@@ -155,100 +154,38 @@
                                     <td height="10" colspan="4"></td>
                                 </tr>
 
-                               
                                 <tr>
-                                    <td width="20" height="40" align="center" class="text_red">*</td>
-                                    <td width="100" height="40" align="left" class="text_cray1">真实姓名：</td>
-                                    <td align="left" class="text_cray">${resume.name}</td>
+                                    <td width="120" height="40" align="left" class="text_cray1">用户名：</td>
+                                    <td width="350" align="left" class="text_cray"><%= user.getUsername() %></td>
+                                    <td width="230" rowspan="5" align="center" background="images/bg_point_write.gif"
+                                        class="text_cray">
+                                        <img src="images/photo.jpg" width="139" height="139">
+                                    </td>
+
                                 </tr>
                                 <tr>
-                                    <td width="20" height="40" align="center" class="text_red">*</td>
-                                    <td width="100" height="40" align="left" class="text_cray1">性 别：</td>
-                                    <td align="left" class="text_cray"><input id="man" type="radio" checked="checked"
-                                                                              name="1"/>男<input id="woman" type="radio"
-                                                                                                name="1"/>女
+                                    <td width="120" height="40" align="left" class="text_cray1">密 码：</td>
+                                    <td align="left" class="text_cray"><%= user.getRealname() %></td>
+                                </tr>
+                                <tr>
+                                    <td width="120" height="40" align="left" class="text_cray1">性 别：</td>
+                                    <td align="left" class="text_cray"><%= user.getSex() %></td>
+                                </tr>
+                                <tr>
+                                    <td width="120" height="40" align="left" class="text_cray1">手机号码：</td>
+                                    <td align="left" class="text_cray"><%= user.getCity() %>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="20" height="40" align="center" class="text_red">*</td>
-                                    <td width="100" height="40" align="left" class="text_cray1">工作年龄：</td>
-                                    <td align="left" class="text_cray">${resume.workAge}
+                                    <td width="120" height="40" align="left" class="text_cray1">电子邮箱：</td>
+                                    <td align="left" class="text_cray"><%= user.getCity().getCity() %></td>
+                                </tr>
+                                <tr>
+                                    <td width="120" height="40" align="left" class="text_cray1">生 日：</td>
+                                    <td colspan="2" align="left" class="text_cray"><%=user.getCertType().getContent()%>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td width="20" height="40" align="center" class="text_red">*</td>
-                                    <td width="100" height="40" align="left" class="text_cray1">生日：</td>
-                                    <td align="left" class="text_cray">${resume.birthday}</td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40" align="center" class="text_red">*</td>
-                                    <td width="100" height="40" align="left" class="text_cray1">居住地：</td>
-                                    <td colspan="2" align="left" class="text_cray">${resume.location}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40" align="center" class="text_red">*</td>
-                                    <td width="100" height="40" align="left" class="text_cray1">手机号码：</td>
-                                    <td colspan="2" align="left" class="text_cray">${resume.phoneNum}</td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40" align="center" class="text_red">*</td>
-                                    <td width="100" height="40" align="left" class="text_cray1">邮箱：</td>
-                                    <td colspan="2" align="left" class="text_cray">${resume.email}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40"></td>
-                                    <td width="100" height="40" align="left" class="text_cray1">职业：</td>
-                                    <td colspan="3" align="left" class="text_cray">${resume.profession}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40"></td>
-                                    <td width="100" height="40" align="left" class="text_cray1">工作经验：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.workExperience}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40"></td>
-                                    <td width="100" height="40" align="left" class="text_cray1">项目经验：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.projectExperience}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40"></td>
-                                    <td width="100" height="40" align="left" class="text_cray1">教育情况：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.educationExperience}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40"></td>
-                                    <td width="100" height="40" align="left" class="text_cray1">在校情况：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.graduteInfo}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40"></td>
-                                    <td width="100" height="40" align="left" class="text_cray1">技能特长：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.skillsSpeciality}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40"></td>
-                                    <td width="100" height="40" align="left" class="text_cray1">附加信息：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray">${resume.additionalInfo}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="20" height="40"></td>
-                                    <td width="100" height="40" align="left" class="text_cray1">是否公开：</td>
-                                    <td height="40" colspan="2" align="left" class="text_cray"><input id="yes"
-                                                                                                      type="radio"
-                                                                                                      checked="checked"
-                                                                                                      name="1"/>是<input
-                                            id="no" type="radio" name="1"/>否
-                                    </td>
-                                </tr>
+
                             </table>
                             <br>
                             <table width="100%" border="0" cellspacing="0">

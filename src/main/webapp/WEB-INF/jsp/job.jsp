@@ -118,7 +118,7 @@
     <div>
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
-                <img alt="Brand" src="imagesBackup/favicon.ico">
+                <img alt="Brand" src="images/favicon.ico">
             </a>
         </div>
         <div class="nav navbar-nav">
@@ -127,7 +127,7 @@
         <div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="index.html">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                    <a href="home.jsp">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
                 </li>
             </ul>
         </div>

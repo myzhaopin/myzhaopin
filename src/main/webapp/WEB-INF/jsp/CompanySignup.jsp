@@ -1,8 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,13 +44,6 @@
             background-color: #f8fdff;
         }
 
-        .left {
-            width: 230px;
-            background: url(images/left.png) left top repeat #f8fdff;
-            height: 650px;
-            float: left;
-            padding-top: 30px;
-        }
 
         .right {
             background: url(images/right_1600.png) right top no-repeat #f8fdff;
@@ -69,44 +58,17 @@
             width: 100%;
         }
 
-        .left a.nav_box span.dt {
-            font-size: 20px;
-            font-family: '微软雅黑';
-            line-height: 26px;
-            padding-left: 30px;
-            height: 26px;
-        }
-
         .left a.cur span {
             display: block;
             color: #fff;
-        }
-
-        .left a.nav_box span.dd {
-            line-height: 16px;
-            height: 16px;
-            padding-top: 10px;
-            display: block;
-        }
-
-        .left a.cur span.nav_2{
-            background:url(images/index_icon_1.png) 0 -48px no-repeat;
         }
 
         .left a.nav_box span{
             color: #616c72;
         }
 
-        .footer {
+        .footer{
             text-align: center;
-        }
-
-        .footer-fixed-bottom {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 60px;
-            clear: both;
         }
     </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -144,7 +106,7 @@
                                                                     required="required"/>
                     </div>
                     <div class="form-group">
-                        <label for="realName">公司名称：</label><input class="form-control" id="realName" type="text" 
+                        <label for="realName">公司名称：</label><input class="form-control" id="realName" type="text"
                         												name="companyName"/>
                     </div>
                     <div class="form-group">
@@ -162,7 +124,7 @@
     </div>
 </div>
 
-<footer class="panel-footer footer-fixed-bottom" style="text-align: center">
+<footer class="panel-footer footer" style="text-align: center">
     <!-- Footnotes -->
     <div id="wyu-footer-column">
         <!-- Toolbar -->
