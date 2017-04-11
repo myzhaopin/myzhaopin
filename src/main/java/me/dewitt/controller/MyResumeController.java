@@ -16,13 +16,13 @@ public class MyResumeController {
 	@Resource
 	private ResumeService resumeService;
 	
-	@RequestMapping(value="/MyResume", method=RequestMethod.GET)
+	@RequestMapping(value="/MyResumes", method=RequestMethod.GET)
 	public String myResume(String resumeId, ModelMap map)
 	{
-		int id = Integer.parseInt(resumeId);
-		Resume resume = resumeService.GetResumeById(id);
+		//int id = Integer.parseInt(resumeId);
+		//Resume resume = resumeService.GetResumeById(id);
 		
-		map.addAttribute("resume", resume);
-		return "MyResume";
+		//map.addAttribute("resume", resume);
+		return "MyResumes";
 	}
 }

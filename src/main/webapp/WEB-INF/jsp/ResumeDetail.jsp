@@ -95,14 +95,6 @@
         </table>
         <table width="835" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
-                <td height="20" colspan="2" align="center"></td>
-            </tr>
-            <tr>
-                <td width="64" align="center"></td>
-                <td width="771" height="30" align="left" valign="top"><span
-                        class="text_blod_title">查看我的简历</span></td>
-            </tr>
-            <tr>
                 <td height="15" colspan="2"><img src="images/line1.jpg" width="835" height="6"></td>
             </tr>
             <tr>
@@ -217,12 +209,6 @@
                     <table width="100%" border="0" cellspacing="0">
                         <tr>
                             <td></td>
-                        </tr>
-                    </table>
-                    <table width="263" border="0" align="center" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td height="30" align="center"><input name="button" type="button" class="butxg"
-                                                                  id="button" value="" onClick=""></td>
                         </tr>
                     </table>
         </table>

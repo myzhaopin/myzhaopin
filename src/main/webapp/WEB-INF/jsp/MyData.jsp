@@ -22,9 +22,9 @@
 
     <style type="text/css">
 
-        .updateData, .MyData, .loginOut {
-            font-size: 35px;
-            line-height: 90px;
+        body{
+            overflow-y: hidden;
+            overflow-x: hidden;
         }
 
         .list_item_bot .li_b_l span {
@@ -33,15 +33,6 @@
             vertical-align: middle;
             font-size: 12px;
             padding: 0 5px;
-        }
-
-        .container {
-            margin-top: 80px;
-        }
-
-        .left {
-            margin-top: 70px;
-            margin-bottom: 10px;
         }
 
         footer {
@@ -69,13 +60,6 @@
             text-decoration: none;
         }
 
-        .text_red {
-            font-size: 12px;
-            color: #e25c2e;
-            text-decoration: none;
-            line-height: 28px;
-        }
-
         .text_title {
             font-size: 20px;
             font-weight: bolder;
@@ -95,150 +79,97 @@
 </head>
 
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div>
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img alt="Brand" src="images/favicon.ico">
-            </a>
-        </div>
-        <div class="nav navbar-nav">
-            <h3>我的基本信息</h3>
-        </div>
-        <div>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="index.html">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-2 column left">
-            <div><a href="#" class="updateData">修改资料</a></div>
-            <div><a href="#" class="MyData">我的简历</a></div>
-            <div><a href="#" class="loginOut">退出</a></div>
-        </div>
-        <div class="col-md-10 column right">
+<div class="col-md-12 column right">
+    <form name="form1" method="post">
+        <table width="100%" border="0" cellspacing="0">
+            <tr>
+                <td height="30">&nbsp;</td>
+            </tr>
+        </table>
+        <table width="835" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td height="20" colspan="2" align="center"></td>
+            </tr>
+            <tr>
+                <td width="64" align="center"></td>
+                <td width="771" height="30" align="left" valign="top"><span
+                        class="text_blod_title">查看个人基本资料</span></td>
+            </tr>
+            <tr>
+                <td height="15" colspan="2"><img src="images/line1.jpg" width="835" height="6"></td>
+            </tr>
+            <tr>
+                <td colspan="2" valign="top">
+                    <table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="20" colspan="4"></td>
+                        </tr>
+                        <tr>
+                            <td height="15" colspan="4" align="left" class="text_title">个人详细信息</td>
+                        </tr>
+                        <tr>
+                            <td height="10" colspan="4"></td>
+                        </tr>
 
-            <form name="form1" method="post">
-                <table width="100%" border="0" cellspacing="0">
-                    <tr>
-                        <td height="30">&nbsp;</td>
-                    </tr>
-                </table>
-                <table width="835" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td height="20" colspan="2" align="center"></td>
-                    </tr>
-                    <tr>
-                        <td width="64" align="center"></td>
-                        <td width="771" height="30" align="left" valign="top"><span
-                                class="text_blod_title">查看个人基本资料</span></td>
-                    </tr>
-                    <tr>
-                        <td height="15" colspan="2"><img src="images/line1.jpg" width="835" height="6"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" valign="top">
-                            <table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td height="20" colspan="4"></td>
-                                </tr>
-                                <tr>
-                                    <td height="15" colspan="4" align="left" class="text_title">个人详细信息</td>
-                                </tr>
-                                <tr>
-                                    <td height="10" colspan="4"></td>
-                                </tr>
+                        <tr>
+                            <td width="120" height="40" align="left" class="text_cray1">用户名：</td>
+                            <td width="350" align="left" class="text_cray"></td>
+                            <td width="230" rowspan="5" align="center" background="images/bg_point_write.gif"
+                                class="text_cray">
+                                <img src="images/photo.jpg" width="139" height="139">
+                            </td>
 
-                                <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1">用户名：</td>
-                                    <td width="350" align="left" class="text_cray"><%= user.getUsername() %></td>
-                                    <td width="230" rowspan="5" align="center" background="images/bg_point_write.gif"
-                                        class="text_cray">
-                                        <img src="images/photo.jpg" width="139" height="139">
-                                    </td>
+                        </tr>
+                        <tr>
+                            <td width="120" height="40" align="left" class="text_cray1">密 码：</td>
+                            <td align="left" class="text_cray"></td>
+                        </tr>
+                        <tr>
+                            <td width="120" height="40" align="left" class="text_cray1">性 别：</td>
+                            <td align="left" class="text_cray"></td>
+                        </tr>
+                        <tr>
+                            <td width="120" height="40" align="left" class="text_cray1">手机号码：</td>
+                            <td align="left" class="text_cray"></td>
+                        </tr>
+                        <tr>
+                            <td width="120" height="40" align="left" class="text_cray1">电子邮箱：</td>
+                            <td align="left" class="text_cray"></td>
+                        </tr>
+                        <tr>
+                            <td width="120" height="40" align="left" class="text_cray1">生 日：</td>
+                            <td colspan="2" align="left" class="text_cray"></td>
+                        </tr>
 
-                                </tr>
-                                <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1">密 码：</td>
-                                    <td align="left" class="text_cray"><%= user.getRealname() %></td>
-                                </tr>
-                                <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1">性 别：</td>
-                                    <td align="left" class="text_cray"><%= user.getSex() %></td>
-                                </tr>
-                                <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1">手机号码：</td>
-                                    <td align="left" class="text_cray"><%= user.getCity() %>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1">电子邮箱：</td>
-                                    <td align="left" class="text_cray"><%= user.getCity().getCity() %></td>
-                                </tr>
-                                <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1">生 日：</td>
-                                    <td colspan="2" align="left" class="text_cray"><%=user.getCertType().getContent()%>
-                                    </td>
-                                </tr>
-
-                            </table>
-                            <br>
-                            <table width="100%" border="0" cellspacing="0">
-                                <tr>
-                                    <td></td>
-                                </tr>
-                            </table>
-                            <table width="263" border="0" align="center" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td height="30" align="center"><input name="button" type="button" class="butxg"
-                                                                          id="button" value="" onClick=""></td>
-                                </tr>
-                            </table>
-                </table>
-                <table width="100%" border="0" cellspacing="0">
-                    <tr>
-                        <td height="20"></td>
-                    </tr>
-                </table>
-                <table width="100%" border="0" cellspacing="0">
-                    <tr>
-                        <td height="2" background="images/bottom_point.gif"></td>
-                    </tr>
-                </table>
-                </td>
-                </tr>
-                </table>
-            </form>
-        </div>
-    </div>
+                    </table>
+                    <br>
+                    <table width="100%" border="0" cellspacing="0">
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table width="263" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="30" align="center"><input name="button" type="button" class="butxg"
+                                                                  id="button" value="" onClick=""></td>
+                        </tr>
+                    </table>
+        </table>
+        <table width="100%" border="0" cellspacing="0">
+            <tr>
+                <td height="20"></td>
+            </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0">
+            <tr>
+                <td height="2" background="images/bottom_point.gif"></td>
+            </tr>
+        </table>
+        </td>
+        </tr>
+        </table>
+    </form>
 </div>
-<footer class="panel-footer">
-    <!-- Footnotes -->
-    <div id="wyu-footer-column">
-        <!-- Toolbar -->
-        <div id="wyu-footer-notes">
-            <div class="addr">
-                <p>版权所有&copy;五邑大学&nbsp;&nbsp;
-                    地址：广东江门市东成村22号&nbsp;&nbsp;
-                    邮编：529020&nbsp;&nbsp;
-                    五邑大学党政办：(0750)3296113&nbsp;&nbsp;
-                    传真：(0750)3358395&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    粤ICP备15096031号</p>
-                <p><a href="zszx.html" target="_self">招生咨询</a>&nbsp;&nbsp;全日制本科招生咨询：(0750)3296263，3296265&nbsp;&nbsp;
-                    网络管理中心：(0750)3296114&nbsp;&nbsp;
-                    校长信箱：<a href="mailto:wyuxfyx@126.com">wyuxfyx@126.com</a></p>
-            </div>
-        </div>
-        <!-- /Toolbar -->
-    </div>
-    <!-- /Footnotes -->
-</footer>
-
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

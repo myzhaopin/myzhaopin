@@ -40,14 +40,6 @@
         }
 
         .form-signin .form-signin-heading,
-        .form-signin .checkbox {
-            text-align: left;
-            margin-bottom: 10px;
-        }
-
-        .form-signin .checkbox{
-            font-weight: normal;
-        }
 
         .form-signin .form-control{
             position: relative;
@@ -100,6 +92,10 @@
             height: 60px;
             clear: both;
         }
+
+        .Companylogin{
+            float:left;
+        }
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -121,7 +117,7 @@
         <div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="index.jsp">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                    <a href="home">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
                 </li>
             </ul>
         </div>

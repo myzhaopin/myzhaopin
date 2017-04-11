@@ -22,13 +22,12 @@
     <![endif]-->
 
     <style type="text/css">
+        body{
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
         .btn {
             float: right;
-        }
-
-        .CompanyData, .jobData,.checkZhaopin, .loginOut {
-            font-size: 20px;
-            line-height: 90px;
         }
 
         .job {
@@ -66,112 +65,56 @@
             margin-top: 80px;
         }
 
-        .left {
-            border: 1px solid #dcdcdc;
-            min-height: 500px;
-        }
 
-        footer {
-            text-align: center;
-        }
     </style>
 
 </head>
 
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div>
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img alt="Brand" src="images/favicon.ico">
-            </a>
-        </div>
-        <div class="nav navbar-nav">
-            <h3>我的简历</h3>
-        </div>
-        <div>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="home.jsp">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
 <div class="container">
     <div class="row clearfix">
-        <div class="col-md-2 column"></div>
-        <div class="col-md-2 column left">
-            <div><a href="#" class="CompanyData">企业信息</a></div>
-            <div><a href="#" class="jobData">招聘信息</a></div>
-            <div><a href="#" class="checkZhaopin">查看求职信息</a></div>
-            <div><a href="#" class="loginOut">退出</a></div>
-        </div>
-        <div class="col-md-6 column right">
+        <div class="col-md-12 column right">
             <!--这里应该用ul li来把没一条包起来，动态判断有多少条就显示多少-->
             <div class="row clearfix">
                 <div class="col-md-12 column">
                     <div class="detail">
                         <h2 class="job">招聘信息1</h2>
-                        <button type="button" class="btn btn-default edit">查看</button>
+                        <a class="btn btn-default edit" href="ZhaoPinDetail" type="button">查看</a>
                     </div>
                 </div>
                 <div class="col-md-12 column">
                     <div class="detail">
                         <h2 class="job">招聘信息2</h2>
-                        <button type="button" class="btn btn-default edit">查看</button>
+                        <a class="btn btn-default edit" href="ZhaoPinDetail" type="button">查看</a>
                     </div>
                 </div>
                 <div class="col-md-12 column">
                     <div class="detail">
                         <h2 class="job">招聘信息3</h2>
-                        <button type="button" class="btn btn-default edit">查看</button>
+                        <a class="btn btn-default edit" href="ZhaoPinDetail" type="button">查看</a>
                     </div>
                 </div>
                 <div class="col-md-12 column">
                     <div class="detail">
                         <h2 class="job">招聘信息4</h2>
-                        <button type="button" class="btn btn-default edit">查看</button>
+                        <a class="btn btn-default edit" href="ZhaoPinDetail" type="button">查看</a>
                     </div>
                 </div>
                 <div class="col-md-12 column">
                     <div class="detail">
                         <h2 class="job">招聘信息5</h2>
-                        <button type="button" class="btn btn-default edit">查看</button>
+                        <a class="btn btn-default edit" href="ZhaoPinDetail" type="button">查看</a>
                     </div>
                 </div>
                 <div class="col-md-12 column">
                     <div class="detail deleteBorder">
-                        <button type="button" class="btn edit">新&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp增</button>
+                        <a type="button" class="btn edit" href="AddZhaoPin">新&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp增</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 column"></div>
     </div>
 </div>
-</div>
-<footer class="panel-footer footer">
-    <!-- Footnotes -->
-    <div id="wyu-footer-column">
-        <!-- Toolbar -->
-        <div id="wyu-footer-notes">
-            <div class="addr">
-                <p>版权所有&copy;五邑大学&nbsp;&nbsp;
-                    地址：广东江门市东成村22号&nbsp;&nbsp;
-                    邮编：529020&nbsp;&nbsp;
-                    五邑大学党政办：(0750)3296113&nbsp;&nbsp;
-                    传真：(0750)3358395&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    粤ICP备15096031号</p>
-                <p><a href="zszx.html" target="_self">招生咨询</a>&nbsp;&nbsp;全日制本科招生咨询：(0750)3296263，3296265&nbsp;&nbsp;
-                    网络管理中心：(0750)3296114&nbsp;&nbsp;
-                    校长信箱：<a href="mailto:wyuxfyx@126.com">wyuxfyx@126.com</a></p>
-            </div>
-        </div>
-        <!-- /Toolbar -->
-    </div>
-    <!-- /Footnotes -->
-</footer>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

@@ -64,4 +64,9 @@ public class LoginController {
 	{
 		return "CompanyLogin";
 	}
+
+	@RequestMapping(value = "/User_login_success",method = RequestMethod.GET)
+	public String userloginsuccess(){
+		return "UserLoginSuccess";
+	}
 }

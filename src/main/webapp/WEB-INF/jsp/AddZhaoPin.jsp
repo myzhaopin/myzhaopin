@@ -21,6 +21,10 @@
     <![endif]-->
 
     <style type="text/css">
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
 
         .list_item_bot .li_b_l span {
             border: 1px solid #dcdcdc;
@@ -45,7 +49,7 @@
             border: 0;
         }
 
-        .butgo{
+        .butgo {
             width: 150px;
             height: 26px;
             background-image: url(images/button_go.jpg);
@@ -66,7 +70,7 @@
             text-decoration: none;
         }
 
-        .intro{
+        .intro {
             padding-top: 1px;
         }
 
@@ -89,25 +93,6 @@
 </head>
 
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div>
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img alt="Brand" src="images/favicon.ico">
-            </a>
-        </div>
-        <div class="nav navbar-nav">
-            <h3>工作详情</h3>
-        </div>
-        <div>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="home.jsp">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column right">
@@ -124,7 +109,8 @@
                     </tr>
                     <tr>
                         <td width="64" align="center"></td>
-                        <td width="771" height="30" align="left" valign="top"><span class="text_blod_title">查看工作详情</span></td>
+                        <td width="771" height="30" align="left" valign="top"><span
+                                class="text_blod_title">新增招聘信息</span></td>
                     </tr>
                     <tr>
                         <td height="15" colspan="2"><img src="images/line1.jpg" width="835" height="6"></td>
@@ -136,29 +122,32 @@
                                     <td height="20" colspan="4"></td>
                                 </tr>
                                 <tr>
-                                    <td height="15" colspan="4" align="left" class="text_title">工作详情</td>
+                                    <td height="15" colspan="4" align="left" class="text_title"></td>
                                 </tr>
                                 <tr>
                                     <td height="10" colspan="4"></td>
                                 </tr>
 
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1">标 题：</td>
-                                    <td width="350" align="left" class="text_cray"><%= user.getUsername() %></td>
+                                    <td width="120" height="40" align="left" class="text_cray1"><label for="workDetail">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</label></td>
+                                    <td width="350" align="left" class="text_cray"><input class="form-control" id="workDetail" type="text" required="required" name="workDetail"/></td>
 
 
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1">薪 资：</td>
-                                    <td align="left" class="text_cray"><%= usergetRealname() %></td>
+                                    <td width="120" height="40" align="left" class="text_cray1"><label for="pay">薪&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资：</label></td>
+                                    <td align="left" class="text_cray"><input class="form-control" id="pay" type="text" required="required" name="pay"/></td>
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1 intro">简 介：</td>
-                                    <td align="left" class="text_cray"><%= usergetSex() %>阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬阿发撒的发生大法师打发斯蒂芬</td>
+                                    <td width="120" height="40" align="left" class="text_cray1 intro"><label for="intro">介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绍：</label></td>
+                                    <td align="left" class="text_cray"><textarea id="intro" class="form-group" rows="13" cols="45" name="introdution"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1">是否通过审核：</td>
-                                    <td align="left" class="text_cray"><%= user.getCity() %></td>
+                                    <td width="120" height="40" align="left" class="text_cray1"><label>是否通过审核：</label></td>
+                                    <td align="left" class="text_cray">
+                                        <input type="radio" name="radio" value="1" checked>是
+                                        <input type="radio" name="radio" value="2">否
+                                    </td>
                                 </tr>
 
                             </table>
@@ -170,8 +159,10 @@
                             </table>
                             <table width="48%" border="0" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td height="30" align="center"><input name="button" type="button" class="butxg" id="button" value="" onClick=""></td>
-                                    <td height="30" align="right"><input name="button" type="button" class="butgo" value="" onClick=""></td>
+                                    <td height="30" align="center"><input name="button" type="button" class="butxg"
+                                                                          id="button" value="" onClick=""></td>
+                                    <td height="30" align="right"><input name="button" type="button" class="butgo"
+                                                                         value="" onClick="window.location='EmployResumes'"></td>
                                 </tr>
                             </table>
                 </table>
@@ -189,28 +180,6 @@
         </div>
     </div>
 </div>
-<footer class="panel-footer">
-    <!-- Footnotes -->
-    <div id="wyu-footer-column">
-        <!-- Toolbar -->
-        <div id="wyu-footer-notes">
-            <div class="addr">
-                <p>版权所有&copy;五邑大学&nbsp;&nbsp;
-                    地址：广东江门市东成村22号&nbsp;&nbsp;
-                    邮编：529020&nbsp;&nbsp;
-                    五邑大学党政办：(0750)3296113&nbsp;&nbsp;
-                    传真：(0750)3358395&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    粤ICP备15096031号</p>
-                <p><a href="zszx.html" target="_self">招生咨询</a>&nbsp;&nbsp;全日制本科招生咨询：(0750)3296263，3296265&nbsp;&nbsp;
-                    网络管理中心：(0750)3296114&nbsp;&nbsp;
-                    校长信箱：<a href="mailto:wyuxfyx@126.com">wyuxfyx@126.com</a></p>
-            </div>
-        </div>
-        <!-- /Toolbar -->
-    </div>
-    <!-- /Footnotes -->
-</footer>
-
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

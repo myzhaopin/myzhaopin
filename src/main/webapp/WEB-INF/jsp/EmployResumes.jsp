@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!--<link rel="icon" href="images/favicon.ico">-->
 
-    <title>我的简历</title>
+    <title>应聘简历</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,15 +55,6 @@
             font-size: 12px;
             padding: 0 5px;
         }
-
-        footer {
-            text-align: center;
-        }
-
-        .newBtn{
-            margin-bottom: 20px;
-            float:right;
-        }
     </style>
 
 </head>
@@ -72,32 +63,32 @@
 <div class="col-md-11 column">
     <div class="detail">
         <h2 class="job">简历1</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
+        <a class="btn btn-default edit" href="ResumeDetail" type="button">查看</a>
     </div>
 </div>
 <div class="col-md-11 column">
     <div class="detail">
         <h2 class="job">简历2</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
+        <a class="btn btn-default edit" href="ResumeDetail" type="button">查看</a>
     </div>
 </div>
 <div class="col-md-11 column">
     <div class="detail">
         <h2 class="job">简历3</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
+        <a class="btn btn-default edit" href="ResumeDetail" type="button">查看</a>
     </div>
 </div>
 <div class="col-md-11 column">
     <div class="detail">
         <h2 class="job">简历3</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
+        <a class="btn btn-default edit" href="ResumeDetail" type="button">查看</a>
     </div>
 </div>
 <div class="col-md-11 column">
     <div class="detail">
         <h2 class="job">简历4</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
-    </div><button class="btn btn-default newBtn" type="button">新建简历</button>
+        <a class="btn btn-default edit" href="ResumeDetail" type="button">查看</a>
+    </div>
 </div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
