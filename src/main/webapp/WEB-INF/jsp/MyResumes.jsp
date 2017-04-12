@@ -64,6 +64,10 @@
             margin-bottom: 20px;
             float:right;
         }
+
+        .deleteBorder{
+            border: 0px;
+        }
     </style>
 
 </head>
@@ -97,7 +101,12 @@
     <div class="detail">
         <h2 class="job">简历4</h2>
         <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
-    </div><button class="btn btn-default newBtn" type="button">新建简历</button>
+    </div>
+</div>
+<div class="col-md-11 column">
+    <div class="detail deleteBorder">
+        <a type="button" class="btn edit" href="AddResume">新建简历</a>
+    </div>
 </div>
 <!-- Bootstrap core JavaScript
 ================================================== -->

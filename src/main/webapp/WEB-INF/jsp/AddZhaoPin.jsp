@@ -57,7 +57,7 @@
         }
 
         .text_cray {
-            padding-top: 15px;
+            padding-top: 5px;
             font-size: 16px;
             color: #6b6b6b;
             text-decoration: none;
@@ -143,10 +143,16 @@
                                     <td align="left" class="text_cray"><textarea id="intro" class="form-group" rows="13" cols="45" name="introdution"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1"><label>是否通过审核：</label></td>
+                                    <td width="120" height="40" align="left" class="text_cray1"><label>产品类型：</label></td>
                                     <td align="left" class="text_cray">
-                                        <input type="radio" name="radio" value="1" checked>是
-                                        <input type="radio" name="radio" value="2">否
+                                        <select>
+                                            <option value ="1">IT</option>
+                                            <option value ="2">房地产</option>
+                                            <option value="3">教育</option>
+                                            <option value="4">旅游</option>
+                                            <option value="5">金融</option>
+                                            <option value="6">餐饮</option>
+                                        </select>
                                     </td>
                                 </tr>
 

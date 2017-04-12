@@ -47,7 +47,7 @@
         }
 
         .text_cray {
-            padding-top: 15px;
+            padding-top: 5px;
             font-size: 16px;
             color: #6b6b6b;
             text-decoration: none;
@@ -112,33 +112,30 @@
                         </tr>
 
                         <tr>
-                            <td width="120" height="40" align="left" class="text_cray1">用户名：</td>
-                            <td width="350" align="left" class="text_cray">${sessionScope.currUser.userName}</td>
-                            <td width="230" rowspan="5" align="center" background="images/bg_point_write.gif"
-                                class="text_cray">
-                                <img src="images/photo.jpg" width="139" height="139">
-                            </td>
+
+                            <td width="80" height="40" align="left" class="text_cray1">用户名：</td>
+                            <td align="left" class="text_cray"><input class="form-control" type="text" name="username" required="required">${sessionScope.currUser.userName}</td>
 
                         </tr>
                         <tr>
-                            <td width="120" height="40" align="left" class="text_cray1">密 码：</td>
-                            <td align="left" class="text_cray"></td>
+                            <td width="80" height="40" align="left" class="text_cray1">密 码：</td>
+                            <td align="left" class="text_cray"><input class="form-control" type="password" name="password" required="required"></td>
                         </tr>
                         <tr>
-                            <td width="120" height="40" align="left" class="text_cray1">性 别：</td>
-                            <td align="left" class="text_cray">${sessionScope.currUser.sex}</td>
+                            <td width="80" height="40" align="left" class="text_cray1">性 别：</td>
+                            <td align="left" class="text_cray"><input id="man" type="radio" checked="checked" name="1"/>男<input id="woman" type="radio" name="1"/>女</td>
                         </tr>
                         <tr>
-                            <td width="120" height="40" align="left" class="text_cray1">手机号码：</td>
-                            <td align="left" class="text_cray">${sessionScope.currUser.phoneNum}</td>
+                            <td width="80" height="40" align="left" class="text_cray1">手机号码：</td>
+                            <td align="left" class="text_cray"><input class="form-control" type="text" name="telphone"/>${sessionScope.currUser.phoneNum}</td>
                         </tr>
                         <tr>
-                            <td width="120" height="40" align="left" class="text_cray1">电子邮箱：</td>
-                            <td align="left" class="text_cray">${sessionScope.currUser.email}</td>
+                            <td width="80" height="40" align="left" class="text_cray1">电子邮箱：</td>
+                            <td align="left" class="text_cray"><input class="form-control" type="email" name="email"/>${sessionScope.currUser.email}</td>
                         </tr>
                         <tr>
                             <td width="120" height="40" align="left" class="text_cray1">生 日：</td>
-                            <td colspan="2" align="left" class="text_cray">${sessionScope.currUser.birthday}</td>
+                            <td colspan="2" align="left" class="text_cray"><input class="form-control" type="text" name="birthday"/>${sessionScope.currUser.birthday}</td>
                         </tr>
 
                     </table>
@@ -150,7 +147,7 @@
                     </table>
                     <table width="263" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td height="30" align="center"><input name="button" type="button" class="butxg"
+                            <td height="30" align="center"><input name="button" type="submit" class="butxg"
                                                                   id="button" value="" onClick=""></td>
                         </tr>
                     </table>

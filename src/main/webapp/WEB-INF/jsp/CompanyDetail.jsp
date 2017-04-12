@@ -46,7 +46,7 @@
         }
 
         .text_cray {
-            padding-top: 15px;
+            padding-top: 5px;
             font-size: 16px;
             color: #6b6b6b;
             text-decoration: none;
@@ -119,25 +119,24 @@
                                 </tr>
 
                                 <tr>
-                                    <td width="100" height="40" align="left" class="text_cray1">账 号：</td>
-                                    <td width="350" align="left" class="text_cray">${sessionScope.currCompany.account }</td>
+                                    <td width="60" height="40" align="left" class="text_cray1">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="username" required="required">${sessionScope.currCompany.account }</td>
+                                </tr>
+                                <%--<tr>--%>
+                                    <%--<td width="100" height="40" align="left" class="text_cray1">密 码：</td>--%>
+                                    <%--<td align="left" class="text_cray"></td>--%>
+                                <%--</tr>--%>
+                                <tr>
+                                    <td width="70" height="40" align="left" class="text_cray1">公&nbsp;&nbsp;司&nbsp;&nbsp;名：</td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="companyname" required="required">${sessionScope.currCompany.companyName }</td>
                                 </tr>
                                 <tr>
-                                    <td width="100" height="40" align="left" class="text_cray1">密 码：</td>
-                                    <td align="left" class="text_cray"></td>
+                                    <td width="80" height="40" align="left" class="text_cray1">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="address" required="required">${sessionScope.currCompany.location }</td>
                                 </tr>
                                 <tr>
-                                    <td width="100" height="40" align="left" class="text_cray1">公司名：</td>
-                                    <td align="left" class="text_cray">${sessionScope.currCompany.companyName }</td>
-                                </tr>
-                                <tr>
-                                    <td width="100" height="40" align="left" class="text_cray1">地 址：</td>
-                                    <td align="left" class="text_cray">${sessionScope.currCompany.location }</td>
-                                </tr>
-
-                                <tr>
-                                    <td width="100" height="40" align="left" class="text_cray1">简 介：</td>
-                                    <td colspan="20" align="left" class="text_cray intro">${sessionScope.currCompany.introdution }</td>
+                                    <td width="80" height="40" align="left" class="text_cray1">简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：</td>
+                                    <td colspan="2" align="left" class="text_cray intro"><textarea rows="5" cols="68" >${sessionScope.currCompany.introdution }</textarea></td>
                                 </tr>
                                 <tr>
                                     <td width="140" height="40" align="left" class="text_cray1">是否通过审核：</td>
@@ -153,7 +152,7 @@
                             </table>
                             <table width="263" border="0" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td height="30" align="center"><input name="button" type="button" class="butxg" id="button" value="" onClick=""></td>
+                                    <td height="30" align="center"><input name="button" type="submit" class="butxg" id="button" value="" onClick=""></td>
                                 </tr>
                             </table>
                 </table>
