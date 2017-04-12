@@ -136,7 +136,7 @@
         <a href="Users_login.jsp" class="personLogin">切换到个人登陆</a><div>&nbsp</div>
         <div class="bbutton">
             <input class="btn btn-lg btn-primary login" type="submit" value="登录" onclick="">
-            <a class="btn btn-lg btn-primary register" href="UserSignup.jsp" type="button">注册</a>
+            <a class="btn btn-lg btn-primary register" href="CompanySignup" type="button">注册</a>
         </div>
 
     </form>

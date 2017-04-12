@@ -103,10 +103,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="UserLogin.jsp">登录</a>
+                    <a href="UserLogin">登录</a>
                 </li>
                 <li>
-                    <a href="UserSignup.jsp">注册</a>
+                    <a href="UserSignup">注册</a>
                 </li>
             </ul>
         </div>

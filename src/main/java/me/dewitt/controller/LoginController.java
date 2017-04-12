@@ -30,7 +30,7 @@ public class LoginController {
 		if(user != null)
 		{
 			map.addAttribute("currUser", user);
-			return "redirect:home";
+			return "redirect:UserLoginSuccess";
 		}
 		else
 		{
@@ -50,8 +50,9 @@ public class LoginController {
 		Company company = companyService.getCompanyByAccountAndPasswd(companyModel);
 		if(null != company)
 		{
+			//System.out.println(company.getIntrodution());
 			map.addAttribute("currCompany", company);
-			return "redirect:home";
+			return "redirect:CompanyLoginSuccess";
 		}
 		else
 		{

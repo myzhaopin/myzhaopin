@@ -113,7 +113,7 @@
 
                         <tr>
                             <td width="120" height="40" align="left" class="text_cray1">用户名：</td>
-                            <td width="350" align="left" class="text_cray"></td>
+                            <td width="350" align="left" class="text_cray">${sessionScope.currUser.userName}</td>
                             <td width="230" rowspan="5" align="center" background="images/bg_point_write.gif"
                                 class="text_cray">
                                 <img src="images/photo.jpg" width="139" height="139">
@@ -126,19 +126,19 @@
                         </tr>
                         <tr>
                             <td width="120" height="40" align="left" class="text_cray1">性 别：</td>
-                            <td align="left" class="text_cray"></td>
+                            <td align="left" class="text_cray">${sessionScope.currUser.sex}</td>
                         </tr>
                         <tr>
                             <td width="120" height="40" align="left" class="text_cray1">手机号码：</td>
-                            <td align="left" class="text_cray"></td>
+                            <td align="left" class="text_cray">${sessionScope.currUser.phoneNum}</td>
                         </tr>
                         <tr>
                             <td width="120" height="40" align="left" class="text_cray1">电子邮箱：</td>
-                            <td align="left" class="text_cray"></td>
+                            <td align="left" class="text_cray">${sessionScope.currUser.email}</td>
                         </tr>
                         <tr>
                             <td width="120" height="40" align="left" class="text_cray1">生 日：</td>
-                            <td colspan="2" align="left" class="text_cray"></td>
+                            <td colspan="2" align="left" class="text_cray">${sessionScope.currUser.birthday}</td>
                         </tr>
 
                     </table>

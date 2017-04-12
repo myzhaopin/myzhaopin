@@ -120,7 +120,7 @@
 
                                 <tr>
                                     <td width="100" height="40" align="left" class="text_cray1">账 号：</td>
-                                    <td width="350" align="left" class="text_cray"></td>
+                                    <td width="350" align="left" class="text_cray">${sessionScope.currCompany.account }</td>
                                 </tr>
                                 <tr>
                                     <td width="100" height="40" align="left" class="text_cray1">密 码：</td>
@@ -128,23 +128,20 @@
                                 </tr>
                                 <tr>
                                     <td width="100" height="40" align="left" class="text_cray1">公司名：</td>
-                                    <td align="left" class="text_cray"></td>
+                                    <td align="left" class="text_cray">${sessionScope.currCompany.companyName }</td>
                                 </tr>
                                 <tr>
                                     <td width="100" height="40" align="left" class="text_cray1">地 址：</td>
-                                    <td align="left" class="text_cray"></td>
+                                    <td align="left" class="text_cray">${sessionScope.currCompany.location }</td>
                                 </tr>
-                                <tr>
-                                    <td width="100" height="40" align="left" class="text_cray1">行 业：</td>
-                                    <td align="left" class="text_cray"></td>
-                                </tr>
+
                                 <tr>
                                     <td width="100" height="40" align="left" class="text_cray1">简 介：</td>
-                                    <td colspan="2" align="left" class="text_cray intro"></td>
+                                    <td colspan="20" align="left" class="text_cray intro">${sessionScope.currCompany.introdution }</td>
                                 </tr>
                                 <tr>
                                     <td width="140" height="40" align="left" class="text_cray1">是否通过审核：</td>
-                                    <td colspan="2" align="left" class="text_cray"></td>
+                                    <td colspan="2" align="left" class="text_cray">${sessionScope.currCompany.verify }</td>
                                 </tr>
 
                             </table>

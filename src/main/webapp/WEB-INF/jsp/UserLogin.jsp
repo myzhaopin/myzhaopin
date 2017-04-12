@@ -133,7 +133,7 @@
 
         <label for="inputPassword" class="sr-only">密码</label>
         <input type="password" id="inputPassword" name="passwd" class="form-control" placeholder="密码" required>
-        <a href="Companylogin.jsp" class="Companylogin">切换到公司登陆</a><div>&nbsp</div>
+        <a href="CompanyLogin" class="Companylogin">切换到公司登陆</a><div>&nbsp</div>
         <%--<div>--%>
             <%--<s:fielderror/>--%>
         <%--</div>--%>
