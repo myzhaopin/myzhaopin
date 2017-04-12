@@ -80,7 +80,7 @@
 
 <body>
 <div class="col-md-12 column right">
-    <form name="form1" method="post">
+    <form name="form1" action="MyData" method="post">
         <table width="100%" border="0" cellspacing="0">
             <tr>
                 <td height="30">&nbsp;</td>
@@ -114,28 +114,28 @@
                         <tr>
 
                             <td width="80" height="40" align="left" class="text_cray1">用户名：</td>
-                            <td align="left" class="text_cray"><input class="form-control" type="text" name="username" required="required">${sessionScope.currUser.userName}</td>
+                            <td align="left" class="text_cray"><input class="form-control" type="text" name="userName" required="required" readonly="true" value="${sessionScope.currUser.userName}"/></td>
 
                         </tr>
                         <tr>
                             <td width="80" height="40" align="left" class="text_cray1">密 码：</td>
-                            <td align="left" class="text_cray"><input class="form-control" type="password" name="password" required="required"></td>
+                            <td align="left" class="text_cray"><input class="form-control" type="password" name="passwd"></td>
                         </tr>
                         <tr>
                             <td width="80" height="40" align="left" class="text_cray1">性 别：</td>
-                            <td align="left" class="text_cray"><input id="man" type="radio" checked="checked" name="1"/>男<input id="woman" type="radio" name="1"/>女</td>
+                            <td align="left" class="text_cray"><input class="form-control" type="text" name="sex" required="required" value="${sessionScope.currUser.sex}"/></td>
                         </tr>
                         <tr>
                             <td width="80" height="40" align="left" class="text_cray1">手机号码：</td>
-                            <td align="left" class="text_cray"><input class="form-control" type="text" name="telphone"/>${sessionScope.currUser.phoneNum}</td>
+                            <td align="left" class="text_cray"><input class="form-control" type="text" name="phoneNum" value="${sessionScope.currUser.phoneNum}"/></td>
                         </tr>
                         <tr>
                             <td width="80" height="40" align="left" class="text_cray1">电子邮箱：</td>
-                            <td align="left" class="text_cray"><input class="form-control" type="email" name="email"/>${sessionScope.currUser.email}</td>
+                            <td align="left" class="text_cray"><input class="form-control" type="email" name="email" value="${sessionScope.currUser.email}"/></td>
                         </tr>
                         <tr>
                             <td width="120" height="40" align="left" class="text_cray1">生 日：</td>
-                            <td colspan="2" align="left" class="text_cray"><input class="form-control" type="text" name="birthday"/>${sessionScope.currUser.birthday}</td>
+                            <td colspan="2" align="left" class="text_cray"><input class="form-control" type="text" name="birthday" value="${sessionScope.currUser.birthday}"/></td>
                         </tr>
 
                     </table>
