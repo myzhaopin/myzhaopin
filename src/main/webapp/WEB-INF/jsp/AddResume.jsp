@@ -100,7 +100,7 @@
             <tr>
                 <td width="64" align="center"></td>
                 <td width="771" height="30" align="left" valign="top"><span
-                        class="text_blod_title">查看我的简历</span></td>
+                        class="text_blod_title">新增简历</span></td>
             </tr>
             <tr>
                 <td height="15" colspan="2"><img src="images/line1.jpg" width="835" height="6"></td>
@@ -112,7 +112,7 @@
                             <td height="20" colspan="4"></td>
                         </tr>
                         <tr>
-                            <td height="15" colspan="4" align="left" class="text_title">个人简历详情</td>
+                            <td height="15" colspan="4" align="left" class="text_title">请填写个人简历</td>
                         </tr>
                         <tr>
                             <td height="10" colspan="4"></td>

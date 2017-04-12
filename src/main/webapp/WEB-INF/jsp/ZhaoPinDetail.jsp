@@ -130,21 +130,21 @@
 
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1">标 题：</td>
-                                    <td width="350" align="left" class="text_cray"></td>
+                                    <td width="350" align="left" class="text_cray"><input class="form-control" type="text" name="title" required="required"></td>
 
 
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1">薪 资：</td>
-                                    <td align="left" class="text_cray"></td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="pay" required="required"></td>
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1 intro">简 介：</td>
-                                    <td align="left" class="text_cray"></td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="intro" required="required"></td>
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1">是否通过审核：</td>
-                                    <td align="left" class="text_cray"></td>
+                                    <td align="left" class="text_cray">是/否</td>
                                 </tr>
 
                             </table>
@@ -156,7 +156,7 @@
                             </table>
                             <table width="48%" border="0" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td height="30" align="center"><input name="button" type="button" class="butxg"
+                                    <td height="30" align="center"><input name="button" type="submit" class="butxg"
                                                                           id="button" value="" onClick=""></td>
                                     <td height="30" align="right"><input name="button" type="button" class="butgo"
                                                                          value="" onClick="window.location='EmployResumes'"></td>

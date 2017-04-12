@@ -30,7 +30,7 @@ public class LoginController {
 		if(user != null)
 		{
 			map.addAttribute("currUser", user);
-			return "redirect:home";
+			return "redirect:Home";
 		}
 		else
 		{
@@ -51,7 +51,7 @@ public class LoginController {
 		if(null != company)
 		{
 			map.addAttribute("currCompany", company);
-			return "redirect:home";
+			return "redirect:Home";
 		}
 		else
 		{
