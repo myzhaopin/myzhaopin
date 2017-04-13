@@ -18,9 +18,9 @@ public class ResumeService {
 	@Resource
 	private ResumeMapper ResumeDao;
 	
-	public Resume getResumeById(Integer id)
+	public ResumeWithBLOBs getResumeById(Integer id)
 	{
-		Resume resume = ResumeDao.selectByPrimaryKey(id);
+		ResumeWithBLOBs resume = ResumeDao.selectByPrimaryKey(id);
 		return resume;
 	}
 	public List<ResumeWithBLOBs> getResumeListByUserId(int userId)
@@ -34,6 +34,13 @@ public class ResumeService {
 	public boolean insertResume(ResumeWithBLOBs record)
 	{
 		if(ResumeDao.insertSelective(record) == 1)
+			return true;
+		else
+			return false;
+	}
+	public boolean updateResume(ResumeWithBLOBs record)
+	{
+		if(ResumeDao.updateByPrimaryKeySelective(record) == 1)
 			return true;
 		else
 			return false;

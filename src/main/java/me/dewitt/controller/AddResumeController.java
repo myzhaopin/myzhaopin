@@ -32,9 +32,11 @@ public class AddResumeController {
     @RequestMapping(value = "/AddResume", method = RequestMethod.POST)
     public String addResume(@ModelAttribute("currUser")User currUser, ResumeWithBLOBs resume, ModelMap map){
     	resume.setUserId(currUser.getUserId());
+    	if(!resume.getSex().equals("男") || !resume.getSex().equals("女"))
+    		resume.setSex(null);
     	if(resumeService.insertResume(resume))
     	{
-    		return "MyResumes";
+    		return "redirect:MyResumes";
     	}
     	else
     	{

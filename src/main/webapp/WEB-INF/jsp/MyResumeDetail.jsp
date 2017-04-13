@@ -87,7 +87,7 @@
 <body>
 <div class="col-md-12 column right">
 
-    <form name="form1" method="post">
+    <form name="form1" method="post" action="MyResumeDetail">
         <table width="100%" border="0" cellspacing="0">
             <tr>
                 <td height="30">&nbsp;</td>
@@ -127,10 +127,8 @@
                         <tr>
                             <td width="20" height="40" align="center" class="text_red">*</td>
                             <td width="100" height="40" align="left" class="text_cray1">性 别：</td>
-                            <td align="left" class="text_cray"><input id="man" type="radio" checked="checked"
-                                                                      name="1"/>男<input id="woman" type="radio"
-                                                                                        name="1"/>女
-                            </td>
+                            <td align="left" class="text_cray"><input class="form-control" type="text" name="sex" value="${resume.sex}"/>
+                             </td>
                         </tr>
                         <tr>
                             <td width="20" height="40" align="center" class="text_red">*</td>
@@ -195,6 +193,9 @@
                             <td width="20" height="40"></td>
                             <td width="100" height="40" align="left" class="text_cray1">附加信息：</td>
                             <td height="40" colspan="2" align="left" class="text_cray"><input class="form-control" type="text" name="additionalInfo" value="${resume.additionalInfo}"/></td>
+                        </tr>
+                        <tr>
+                       <td> <input type="hidden" name="resumeId" value="${resume.resumeId}"/></td>
                         </tr>
                         <tr>
                             <td width="20" height="40"></td>
