@@ -103,10 +103,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="UserLogin.jsp">登录</a>
+                    <a href="UserLogin" id="loginText">登录</a>
                 </li>
                 <li>
-                    <a href="UserSignup.jsp">注册</a>
+                    <a href="UserSignup" id="signupText">注册</a>
                 </li>
             </ul>
         </div>
@@ -379,4 +379,16 @@
 <script src="js/bootstrap.min.js"></script>
 
 </body>
+<script>
+    function changeToWelcome() {
+        var username=session.getAttribute("username");
+        if (username!=null){
+            document.getElementById("loginText").innerText="欢迎您，";
+            document.getElementById("loginText").innerText(username);
+        }
+    }
+    window.onload=function () {
+        changeToWelcome();
+    }
+</script>
 </html>

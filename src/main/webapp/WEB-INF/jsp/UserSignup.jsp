@@ -92,8 +92,8 @@
     <div class="container">
 
         <div id="header" class="header">
-            <a class="login" href="Users_login.jsp" title="">登录</a>
-            <a class="login" href="index.jsp" title="">回到主页</a>
+            <a class="login" href="UserLogin" title="">登录</a>
+            <a class="login" href="Home" title="">回到主页</a>
         </div>
         <div id="content" class="row clearfix">
             <div class="right">
@@ -117,7 +117,7 @@
                         <label for="email">注册邮箱：</label><input class="form-control" id="email" type="email" name="email"/>
                     </div>
                     <div class="form-group">
-                        <label for="sex">性别：</label><input class="form-control" id="sex" type="password"/>
+                        <label>性别：</label><input type="radio" name="1"/>男<input type="radio" name="1"/>女
                     </div>
                     <div class="form-group">
                         <label for="birthday">生日：</label><input class="form-control" id="birthday" type="email"/>
