@@ -61,11 +61,6 @@
             text-align: center;
         }
 
-        .newBtn{
-            margin-bottom: 20px;
-            float:right;
-        }
-
         .deleteBorder{
             border: 0px;
         }
@@ -84,7 +79,7 @@
 </c:forEach>
 <div class="col-md-11 column">
     <div class="detail deleteBorder">
-        <a type="button" class="btn edit" href="AddResume">新建简历</a>
+        <a type="button" class="btn edit newBtn btn-default" href="AddResume">新建简历</a>
     </div>
 </div>
 <!-- Bootstrap core JavaScript

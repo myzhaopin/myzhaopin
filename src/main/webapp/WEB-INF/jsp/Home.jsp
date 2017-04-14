@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -101,14 +102,27 @@
             <img alt="Brand" src="images/logo.png">
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="UserLogin" id="loginText">登录</a>
-                </li>
-                <li>
-                    <a href="UserSignup" id="signupText">注册</a>
-                </li>
-            </ul>
+            <c:if test="${sessionScope.currUser.userName==''}">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="UserLogin" id="loginText">登录</a>
+                    </li>
+                    <li>
+                        <a href="UserSignup" id="signupText">注册</a>
+                    </li>
+                </ul>
+            </c:if>
+            <c:if test="${sessionScope.currUser.userName!=''}">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">欢迎您，${sessionScope.currUser.userName}</a>
+                    </li>
+                    <li>
+                        <a href="UserLogin">退出</a>
+                    </li>
+                </ul>
+            </c:if>
+
         </div>
     </div>
 </nav>
@@ -379,7 +393,7 @@
 <script src="js/bootstrap.min.js"></script>
 
 </body>
-<script>
+<script type="text/javascript">
     function changeToWelcome() {
         var username=session.getAttribute("username");
         if (username!=null){

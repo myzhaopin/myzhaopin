@@ -117,10 +117,10 @@
                         <label for="email">注册邮箱：</label><input class="form-control" id="email" type="email" name="email"/>
                     </div>
                     <div class="form-group">
-                        <label>性别：</label><input type="radio" name="1"/>男<input type="radio" name="1"/>女
+                        <label>性别：</label><input type="radio" name="sex" value="1"/>男<input type="radio" name="sex" value="2"/>女
                     </div>
                     <div class="form-group">
-                        <label for="birthday">生日：</label><input class="form-control" id="birthday" type="email"/>
+                        <label for="birthday">生日：</label><input class="form-control" id="birthday" name="birthday" type="text"/>
                     </div>
                     <button type="submit" class="btn btn-success btn-register" >立即注册</button>
                 </form>
