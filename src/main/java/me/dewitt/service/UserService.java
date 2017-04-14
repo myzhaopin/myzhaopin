@@ -38,4 +38,18 @@ public class UserService {
 		else
 			return null;
 	}
+	
+	public User updateUser(User user)
+	{
+		if(user.getPasswd().equals(""))
+			user.setPasswd(null);
+		UserExample example = new UserExample();
+		example.createCriteria().andUserNameEqualTo(user.getUserName());
+		if(userDao.updateByExampleSelective(user, example) == 1)
+		{
+			return userDao.selectByExample(example).get(0);
+		}
+		else
+			return null;
+	}
 }

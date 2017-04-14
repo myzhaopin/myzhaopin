@@ -33,6 +33,7 @@ public class CompanyService {
 		example.createCriteria().andAccountEqualTo(company.getAccount())
 								.andPasswdEqualTo(company.getPasswd());
 		List<Company> companys = companyDao.selectByExample(example);
+		//System.out.println(companys.get(0).getIntrodution());
 		if(1 == companys.size())
 			return companys.get(0);
 		else

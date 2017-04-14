@@ -120,7 +120,7 @@
 
                                 <tr>
                                     <td width="60" height="40" align="left" class="text_cray1">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</td>
-                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="username" required="required"></td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="username" required="required">${sessionScope.currCompany.account }</td>
                                 </tr>
                                 <%--<tr>--%>
                                     <%--<td width="100" height="40" align="left" class="text_cray1">密 码：</td>--%>
@@ -128,23 +128,19 @@
                                 <%--</tr>--%>
                                 <tr>
                                     <td width="70" height="40" align="left" class="text_cray1">公&nbsp;&nbsp;司&nbsp;&nbsp;名：</td>
-                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="companyname" required="required"></td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="companyname" required="required">${sessionScope.currCompany.companyName }</td>
                                 </tr>
                                 <tr>
                                     <td width="80" height="40" align="left" class="text_cray1">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</td>
-                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="address" required="required"></td>
-                                </tr>
-                                <tr>
-                                    <td width="80" height="40" align="left" class="text_cray1">行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</td>
-                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="username" required="required"></td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="address" required="required">${sessionScope.currCompany.location }</td>
                                 </tr>
                                 <tr>
                                     <td width="80" height="40" align="left" class="text_cray1">简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：</td>
-                                    <td colspan="2" align="left" class="text_cray intro"><textarea rows="5" cols="68" ></textarea></td>
+                                    <td colspan="2" align="left" class="text_cray intro"><textarea rows="5" cols="68" >${sessionScope.currCompany.introdution }</textarea></td>
                                 </tr>
                                 <tr>
                                     <td width="140" height="40" align="left" class="text_cray1">是否通过审核：</td>
-                                    <td colspan="2" align="left" class="text_cray"></td>
+                                    <td colspan="2" align="left" class="text_cray">${sessionScope.currCompany.verify }</td>
                                 </tr>
 
                             </table>

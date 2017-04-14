@@ -113,7 +113,8 @@
         <div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="home.html">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                    <a href="Home">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                    
                 </li>
             </ul>
         </div>

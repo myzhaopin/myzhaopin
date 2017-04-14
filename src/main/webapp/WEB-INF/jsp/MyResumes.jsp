@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -73,36 +74,14 @@
 </head>
 
 <body>
+<c:forEach items="${resumes }" var="item">
 <div class="col-md-11 column">
     <div class="detail">
-        <h2 class="job">简历1</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
+        <h2 class="job">简历</h2>
+        <a class="btn btn-default edit" href="MyResumeDetail?resumeId=${item.resumeId }" type="button">编辑</a>
     </div>
 </div>
-<div class="col-md-11 column">
-    <div class="detail">
-        <h2 class="job">简历2</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
-    </div>
-</div>
-<div class="col-md-11 column">
-    <div class="detail">
-        <h2 class="job">简历3</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
-    </div>
-</div>
-<div class="col-md-11 column">
-    <div class="detail">
-        <h2 class="job">简历3</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
-    </div>
-</div>
-<div class="col-md-11 column">
-    <div class="detail">
-        <h2 class="job">简历4</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail" type="button">编辑</a>
-    </div>
-</div>
+</c:forEach>
 <div class="col-md-11 column">
     <div class="detail deleteBorder">
         <a type="button" class="btn edit" href="AddResume">新建简历</a>
