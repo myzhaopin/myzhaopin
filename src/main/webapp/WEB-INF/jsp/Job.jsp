@@ -171,7 +171,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <c:forEach items="${resumes}" var="item">
-                                    <li><a href="#">简历:${item.profession}</a></li>
+                                    <li><a href="JobApply?jobId=${job.jobId }&resumeId=${item.resumeId}">简历:${item.profession}</a></li>
                                 </c:forEach>
                                 <input type="hidden" name="jobId" value="${job.jobId}"/></td>
                             </ul>

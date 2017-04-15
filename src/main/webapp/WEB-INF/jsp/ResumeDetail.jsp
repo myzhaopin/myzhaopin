@@ -119,9 +119,7 @@
                         <tr>
                             <td width="20" height="40" align="center" class="text_red">*</td>
                             <td width="100" height="40" align="left" class="text_cray1">性 别：</td>
-                            <td align="left" class="text_cray"><input id="man" type="radio" checked="checked"
-                                                                      name="1"/>男<input id="woman" type="radio"
-                                                                                        name="1"/>女
+                            <td align="left" class="text_cray">${resume.sex }
                             </td>
                         </tr>
                         <tr>
@@ -194,16 +192,7 @@
                             <td height="40" colspan="2" align="left" class="text_cray">${resume.additionalInfo}
                             </td>
                         </tr>
-                        <tr>
-                            <td width="20" height="40"></td>
-                            <td width="100" height="40" align="left" class="text_cray1">是否公开：</td>
-                            <td height="40" colspan="2" align="left" class="text_cray"><input id="yes"
-                                                                                              type="radio"
-                                                                                              checked="checked"
-                                                                                              name="1"/>是<input
-                                    id="no" type="radio" name="1"/>否
-                            </td>
-                        </tr>
+                        
                     </table>
                     <br>
                     <table width="100%" border="0" cellspacing="0">

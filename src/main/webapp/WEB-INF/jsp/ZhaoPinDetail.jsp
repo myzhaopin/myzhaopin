@@ -163,7 +163,7 @@
                                     <td height="30" align="center"><input name="button" type="submit" class="butxg"
                                                                           id="button" value="" onClick=""></td>
                                     <td height="30" align="right"><input name="button" type="button" class="butgo"
-                                                                         value="" onClick="window.location='EmployResumes'"></td>
+                                                                         value="" onClick="window.location='EmployResumes?jobId=${job.jobId}'"></td>
                                 </tr>
                             </table>
                 </table>

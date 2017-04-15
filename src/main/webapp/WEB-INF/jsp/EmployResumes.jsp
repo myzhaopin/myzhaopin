@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -60,36 +61,14 @@
 </head>
 
 <body>
+<c:forEach items="${resumes }" var="resume">
 <div class="col-md-11 column">
     <div class="detail">
-        <h2 class="job">简历1</h2>
-        <a class="btn btn-default edit" href="ResumeDetail" type="button">查看</a>
+        <h2 class="job">${resume.name }:${resume.profession }</h2>
+        <a class="btn btn-default edit" href="ResumeDetail?resumeId=${resume.resumeId }" type="button">查看</a>
     </div>
 </div>
-<div class="col-md-11 column">
-    <div class="detail">
-        <h2 class="job">简历2</h2>
-        <a class="btn btn-default edit" href="ResumeDetail" type="button">查看</a>
-    </div>
-</div>
-<div class="col-md-11 column">
-    <div class="detail">
-        <h2 class="job">简历3</h2>
-        <a class="btn btn-default edit" href="ResumeDetail" type="button">查看</a>
-    </div>
-</div>
-<div class="col-md-11 column">
-    <div class="detail">
-        <h2 class="job">简历3</h2>
-        <a class="btn btn-default edit" href="ResumeDetail" type="button">查看</a>
-    </div>
-</div>
-<div class="col-md-11 column">
-    <div class="detail">
-        <h2 class="job">简历4</h2>
-        <a class="btn btn-default edit" href="ResumeDetail" type="button">查看</a>
-    </div>
-</div>
+</c:forEach>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

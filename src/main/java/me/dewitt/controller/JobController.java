@@ -9,10 +9,12 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+
 import java.util.List;
 
 @Controller
-@SessionAttributes("currUser")
+//@SessionAttributes("currUser")
 public class JobController {
 
     @Resource
@@ -25,10 +27,14 @@ public class JobController {
     private CompanyService companyService;
 
     @RequestMapping(value="/Job", method=RequestMethod.GET)
-    public String job(@RequestParam("jobId")String jobId,@RequestParam("companyId")String companyId, @ModelAttribute("currUser")User currUser, ModelMap map)
+    public String job(@RequestParam("jobId")String jobId,@RequestParam("companyId")String companyId, HttpSession session, ModelMap map)
     {
-        List<ResumeWithBLOBs> resumes = resumeService.getResumeListByUserId(currUser.getUserId());
-        map.put("resumes", resumes);
+    	User currUser = (User)session.getAttribute("currUser");
+    	if(currUser != null)
+    	{
+    		List<ResumeWithBLOBs> resumes = resumeService.getResumeListByUserId(currUser.getUserId());
+    		map.put("resumes", resumes);
+    	}
 
         int id = Integer.parseInt(jobId);
         Job job = jobService.getJobByJobId(id);
