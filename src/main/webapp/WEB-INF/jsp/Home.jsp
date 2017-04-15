@@ -239,7 +239,7 @@
                         工作地点
                     </th>
                     <th>
-                        薪资
+                        薪资/月
                     </th>
                     <th>
                         发布时间
@@ -247,91 +247,27 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>
-                        Java工程师
-                    </td>
-                    <td>
-                        广东某某有限公司
-                    </td>
-                    <td>
-                        广州
-                    </td>
-                    <td>
-                        5000-10000/月
-                    </td>
-                    <td>
-                        01/04/2012
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Java工程师
-                    </td>
-                    <td>
-                        广东某某有限公司
-                    </td>
-                    <td>
-                        广州
-                    </td>
-                    <td>
-                        5000-10000/月
-                    </td>
-                    <td>
-                        01/04/2012
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Java工程师
-                    </td>
-                    <td>
-                        广东某某有限公司
-                    </td>
-                    <td>
-                        广州
-                    </td>
-                    <td>
-                        5000-10000/月
-                    </td>
-                    <td>
-                        01/04/2012
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Java工程师
-                    </td>
-                    <td>
-                        广东某某有限公司
-                    </td>
-                    <td>
-                        广州
-                    </td>
-                    <td>
-                        5000-10000/月
-                    </td>
-                    <td>
-                        01/04/2012
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Java工程师
-                    </td>
-                    <td>
-                        广东某某有限公司
-                    </td>
-                    <td>
-                        广州
-                    </td>
-                    <td>
-                        5000-10000/月
-                    </td>
-                    <td>
-                        01/04/2012
-                    </td>
-                </tr>
+                <c:forEach items="${jobDetails}" var="item">
+                    <%----%>
+                    <tr onclick="location.href='Job?jobId=${item.jobId}&companyId=${item.companyId}'">
+                        <td>
+                            ${item.title}
+                        </td>
+                        <td>
+                            ${item.companyName}
+                        </td>
+                        <td>
+                            ${item.location}
+                        </td>
+                        <td>
+                            ${item.salary}
+                        </td>
+                        <td>
+                            ${item.date}
+                        </td>
+                    </tr>
+                </c:forEach>
+
                 </tbody>
             </table>
         </div>

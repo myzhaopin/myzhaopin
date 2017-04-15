@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -127,7 +128,7 @@
         <div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="Home.jsp">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                    <a href="Home">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
                 </li>
             </ul>
         </div>
@@ -141,39 +142,51 @@
                 <div class="list_item_top">
                     <div class="position">
                         <div class="p_top">
-                            <h2 class="job">UI设计</h2>
-                            <span class="where">[<em>广州</em>]</span>
+                            <h2 class="job">${job.title}</h2>
+                            <span class="where">[<em>${company.location}</em>]</span>
                             </a>
-                            <span class="time">1天前发布</span>
+                            <span class="time">${job.date}</span>
                         </div>
                         <div class="p_bot">
                             <div class="li_b_l">
-                                <span class="money">9k-15k</span>
-                                <!--<i></i>-->经验3-5年 / 本科
+                                <span class="money">薪酬：${job.salary}</span>
+
                             </div>
                         </div>
                     </div>
+
                     <div class="company">
                         <div class="company_name">
-                            <a href="#">广东某某科技有限公司</a>
+                            <a href="#">${company.companyName}</a>
                         </div>
                         <div class="industry">
-                            企业服务,移动互联网 / 成长型(A轮)
+                            ${job.industryName}
                         </div>
                     </div>
                     <div class="sendResume">
-                        <button type="button" class="btn btn-default">投递简历</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">投递简历
+                                <span class="caret"></span>
+                            </button>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <c:forEach items="${resumes}" var="item">
+                                    <li><a href="#">简历:${item.profession}</a></li>
+                                </c:forEach>
+                                <input type="hidden" name="jobId" value="${job.jobId}"/></td>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="list_item_bot">
-                    <div class="li_b_l">
-                        <span>UI</span>
-                        <span>设计</span>
-                        <span>app</span>
-                        <span>网页</span>
-                    </div>
-                    <div class="li_b_r">“六险一金 周末双休 带薪年假 员工旅游”</div>
-                </div>
+                <%--<div class="list_item_bot">经验3-5年 / 本科--%>
+                    <%--<div class="li_b_l">--%>
+                        <%--<span>UI</span>--%>
+                        <%--<span>设计</span>--%>
+                        <%--<span>app</span>--%>
+                        <%--<span>网页</span>--%>
+                    <%--</div>--%>
+                    <%--<div class="li_b_r">“六险一金 周末双休 带薪年假 员工旅游”</div>--%>
+                <%--</div>--%>
             </div>
         </div>
     </div>
@@ -184,9 +197,7 @@
                     职位简介
                 </h2>
                 <p>
-                    This is a template for a simple marketing or informational website. It includes a large callout
-                    called the hero unit and three supporting pieces of content. Use it as a starting point to create
-                    something more unique.
+                    ${job.information}
                 </p>
                 <p>
                     <a class="btn btn-primary btn-large" href="#">Learn more</a>
@@ -201,17 +212,14 @@
                     公司简介
                 </h2>
                 <p>
-                    This is a template for a simple marketing or informational website. It includes a large callout
-                    called the hero unit and three supporting pieces of content. Use it as a starting point to create
-                    something more unique.
+                    ${company.introdution}
                 </p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                </p>
+                <%--<p>--%>
+                    <%--<a class="btn btn-primary btn-large" href="#">Learn more</a>--%>
+                <%--</p>--%>
             </div>
         </div>
     </div>
-
 </div>
 <footer class="panel-footer footer">
     <!-- Footnotes -->

@@ -70,9 +70,9 @@
 
 <body>
 <c:forEach items="${resumes }" var="item">
-<div class="col-md-11 column">
+<div class="col-md-12 column">
     <div class="detail">
-        <h2 class="job">简历</h2>
+        <h2 class="job">简历:${item.profession}</h2>
         <a class="btn btn-default edit" href="MyResumeDetail?resumeId=${item.resumeId }" type="button">编辑</a>
     </div>
 </div>
@@ -89,4 +89,10 @@
 <script src="js/bootstrap.min.js"></script>
 
 </body>
+<script>
+    window.onload = function () {
+        screenAdapter();
+        reinitframe();
+    };
+</script>
 </html>
