@@ -44,9 +44,7 @@ public class UserService {
 		if(user.getPasswd().equals(""))
 			user.setPasswd(null);
 		else
-		{
 			user.setPasswd(DigestUtils.md5DigestAsHex(user.getPasswd().getBytes()));
-		}
 		UserExample example = new UserExample();
 		example.createCriteria().andUserNameEqualTo(user.getUserName());
 		if(userDao.updateByExampleSelective(user, example) == 1)

@@ -61,11 +61,6 @@
             text-align: center;
         }
 
-        .newBtn{
-            margin-bottom: 20px;
-            float:right;
-        }
-
         .deleteBorder{
             border: 0px;
         }
@@ -75,16 +70,16 @@
 
 <body>
 <c:forEach items="${resumes }" var="item">
-<div class="col-md-11 column">
+<div class="col-md-12 column">
     <div class="detail">
-        <h2 class="job">简历</h2>
+        <h2 class="job">简历:${item.profession}</h2>
         <a class="btn btn-default edit" href="MyResumeDetail?resumeId=${item.resumeId }" type="button">编辑</a>
     </div>
 </div>
 </c:forEach>
 <div class="col-md-11 column">
     <div class="detail deleteBorder">
-        <a type="button" class="btn edit" href="AddResume">新建简历</a>
+        <a type="button" class="btn edit newBtn btn-default" href="AddResume">新建简历</a>
     </div>
 </div>
 <!-- Bootstrap core JavaScript
@@ -94,4 +89,10 @@
 <script src="js/bootstrap.min.js"></script>
 
 </body>
+<script>
+    window.onload = function () {
+        screenAdapter();
+        reinitframe();
+    };
+</script>
 </html>

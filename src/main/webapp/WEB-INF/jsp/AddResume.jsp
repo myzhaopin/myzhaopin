@@ -127,7 +127,9 @@
                         <tr>
                             <td width="20" height="40" align="center" class="text_red">*</td>
                             <td width="100" height="40" align="left" class="text_cray1">性 别：</td>
-                            <td align="left" class="text_cray"><input class="form-control" type="text" name="sex" value="${resume.sex }"/></td>
+                            <td align="left" class="text_cray">
+                                <input id="man" type="radio" checked="checked" name="sex" value="男"/>男<input id="woman" type="radio" name="sex" value="女"/>女
+                            </td>
                         </tr>
                         <tr>
                             <td width="20" height="40" align="center" class="text_red">*</td>
@@ -165,43 +167,38 @@
                         <tr>
                             <td width="20" height="40"></td>
                             <td width="100" height="40" align="left" class="text_cray1">工作经验：</td>
-                            <td height="40" colspan="2" align="left" class="text_cray"><input class="form-control" type="text" name="workExperience" value="${resume.workExperience}"/>
+                            <td height="40" colspan="2" align="left" class="text_cray"><textarea class="form-control" type="text"rows="10" cols="70" name="workExperience">${resume.workExperience}</textarea>
                             </td>
                         </tr>
                         <tr>
                             <td width="20" height="40"></td>
                             <td width="100" height="40" align="left" class="text_cray1">项目经验：</td>
-                            <td height="40" colspan="2" align="left" class="text_cray"><input class="form-control" type="text" name="workExperience" value="${resume.projectExperience}"/></td>
+                            <td height="40" colspan="2" align="left" class="text_cray"><textarea class="form-control" type="text"rows="10" cols="70" name="projectExperience">${resume.projectExperience}</textarea></td>
                         </tr>
                         <tr>
                             <td width="20" height="40"></td>
                             <td width="100" height="40" align="left" class="text_cray1">教育情况：</td>
-                            <td height="40" colspan="2" align="left" class="text_cray"><input class="form-control" type="text" name="educationExperience" value="${resume.educationExperience}"/></td>
+                            <td height="40" colspan="2" align="left" class="text_cray"><textarea class="form-control" type="text"rows="10" cols="70" name="educationExperience">${resume.educationExperience}</textarea></td>
                         </tr>
                         <tr>
                             <td width="20" height="40"></td>
                             <td width="100" height="40" align="left" class="text_cray1">在校情况：</td>
-                            <td height="40" colspan="2" align="left" class="text_cray"><input class="form-control" type="text" name="graduteInfo" value="${resume.graduteInfo}"/></td>
+                            <td height="40" colspan="2" align="left" class="text_cray"><textarea class="form-control" type="text"rows="10" cols="70" name="graduteInfo">${resume.graduteInfo}</textarea></td>
                         </tr>
                         <tr>
                             <td width="20" height="40"></td>
                             <td width="100" height="40" align="left" class="text_cray1">技能特长：</td>
-                            <td height="40" colspan="2" align="left" class="text_cray"><input class="form-control" type="text" name="skillsSpeciality" value="${resume.skillsSpeciality}"/></td>
+                            <td height="40" colspan="2" align="left" class="text_cray"><textarea class="form-control" type="text"rows="10" cols="70" name="skillsSpeciality">${resume.skillsSpeciality}</textarea></td>
                         </tr>
                         <tr>
                             <td width="20" height="40"></td>
                             <td width="100" height="40" align="left" class="text_cray1">附加信息：</td>
-                            <td height="40" colspan="2" align="left" class="text_cray"><input class="form-control" type="text" name="additionalInfo" value="${resume.additionalInfo}"/></td>
+                            <td height="40" colspan="2" align="left" class="text_cray"><textarea class="form-control" type="text"rows="10" cols="70" name="additionalInfo">${resume.additionalInfo}</textarea></td>
                         </tr>
                         <tr>
                             <td width="20" height="40"></td>
                             <td width="100" height="40" align="left" class="text_cray1">是否公开：</td>
-                            <td height="40" colspan="2" align="left" class="text_cray"><input id="yes"
-                                                                                              type="radio"
-                                                                                              checked="checked"
-                                                                                              name="2"/>是<input
-                                    id="no" type="radio" name="2"/>否
-                            </td>
+                            <td height="40" colspan="2" align="left" class="text_cray"><input id="yes" type="radio"checked="checked" name="hide" value="false"/>是<input id="no" type="radio" name="hide" value="true"/>否</td>
                         </tr>
                     </table>
                     <br>

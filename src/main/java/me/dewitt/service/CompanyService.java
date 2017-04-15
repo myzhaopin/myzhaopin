@@ -52,4 +52,9 @@ public class CompanyService {
 		else
 			return null;
 	}
+
+	public Company getCompanyByCompanyId(int companyId){
+		Company company = companyDao.selectByPrimaryKey(companyId);
+		return  company;
+	}
 }

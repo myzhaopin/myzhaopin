@@ -96,6 +96,10 @@
             vertical-align: middle;
         }
 
+        #iframe_left,#left,#iframe_right,#right{
+            min-height: 350px;
+        }
+
     </style>
 
 </head>
