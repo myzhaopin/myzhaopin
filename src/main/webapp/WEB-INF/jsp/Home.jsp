@@ -102,7 +102,7 @@
             <img alt="Brand" src="images/logo.png">
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <c:if test="${sessionScope.currUser.userName==null}">
+            <c:if test="${sessionScope.currUser == null}">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="UserLogin" id="loginText">登录</a>
@@ -112,10 +112,10 @@
                     </li>
                 </ul>
             </c:if>
-            <c:if test="${sessionScope.currUser.userName!=null}">
+            <c:if test="${sessionScope.currUser != null}">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">欢迎您，${sessionScope.currUser.userName}</a>
+                        <a href="UserLoginSuccess">欢迎您，${sessionScope.currUser.userName}</a>
                     </li>
                     <li>
                         <a href="UserLogin">退出</a>
