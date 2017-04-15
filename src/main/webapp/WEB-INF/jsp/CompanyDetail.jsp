@@ -87,7 +87,7 @@
         <dic class="col-md-1 column"></dic>
         <div class="col-md-8 column right">
 
-            <form name="form1" method="post">
+            <form name="form1" method="post" action="CompanyDetail">
                 <table width="100%" border="0" cellspacing="0">
                     <tr>
                         <td height="30">&nbsp;</td>
@@ -120,23 +120,24 @@
 
                                 <tr>
                                     <td width="60" height="40" align="left" class="text_cray1">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</td>
-                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="username" required="required">${sessionScope.currCompany.account }</td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="account" readonly="true" required="required" value="${sessionScope.currCompany.account }"></td>
                                 </tr>
                                 <%--<tr>--%>
                                     <%--<td width="100" height="40" align="left" class="text_cray1">密 码：</td>--%>
                                     <%--<td align="left" class="text_cray"></td>--%>
                                 <%--</tr>--%>
+                                <input class="form-control" type="hidden" name="companyId" required="required" value="${sessionScope.currCompany.companyId }">
                                 <tr>
                                     <td width="70" height="40" align="left" class="text_cray1">公&nbsp;&nbsp;司&nbsp;&nbsp;名：</td>
-                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="companyname" required="required">${sessionScope.currCompany.companyName }</td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="companyName" required="required" value="${sessionScope.currCompany.companyName }"></td>
                                 </tr>
                                 <tr>
                                     <td width="80" height="40" align="left" class="text_cray1">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</td>
-                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="address" required="required">${sessionScope.currCompany.location }</td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="location" required="required" value="${sessionScope.currCompany.location }"></td>
                                 </tr>
                                 <tr>
                                     <td width="80" height="40" align="left" class="text_cray1">简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：</td>
-                                    <td colspan="2" align="left" class="text_cray intro"><textarea rows="5" cols="68" >${sessionScope.currCompany.introdution }</textarea></td>
+                                    <td colspan="2" align="left" class="text_cray intro"><textarea rows="5" cols="68" name="introdution">${sessionScope.currCompany.introdution }</textarea></td>
                                 </tr>
                                 <tr>
                                     <td width="140" height="40" align="left" class="text_cray1">是否通过审核：</td>

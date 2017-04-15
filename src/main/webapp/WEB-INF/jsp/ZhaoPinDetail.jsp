@@ -130,21 +130,25 @@
 
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1">标 题：</td>
-                                    <td width="350" align="left" class="text_cray"><input class="form-control" type="text" name="title" required="required"></td>
+                                    <td width="350" align="left" class="text_cray"><input class="form-control" type="text" name="title" required="required" value="${job.title }"></td>
 
 
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1">薪 资：</td>
-                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="pay" required="required"></td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="pay" required="required" value="${job.salary }"></td>
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1 intro">简 介：</td>
-                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="intro" required="required"></td>
+                                    <td align="left" class="text_cray"><textarea id="intro" class="form-group" rows="13" cols="45" name="information">${job.information }</textarea></td>
+                                </tr>
+                                <tr>
+                                    <td width="120" height="40" align="left" class="text_cray1">行业：</td>
+                                    <td align="left" class="text_cray">${job.industryName }</td>
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1">是否通过审核：</td>
-                                    <td align="left" class="text_cray">是/否</td>
+                                    <td align="left" class="text_cray">${job.verify }</td>
                                 </tr>
 
                             </table>

@@ -53,6 +53,16 @@
         <property name="maxInMemorySize" value="40960" />    
     </bean>   
   
+      <mvc:interceptors>  
+        <mvc:interceptor>  
+            <mvc:mapping path="/UserLoginSuccess"/>  
+            <mvc:mapping path="/MyData"/>  
+            <mvc:mapping path="/MyResumes"/>  
+            <mvc:mapping path="/MyResumesDetail"/>  
+            <!-- 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 -->  
+            <bean class="me.dewitt.other.UserLoginInterceptor"/>  
+        </mvc:interceptor>  
+    </mvc:interceptors>  
 
   
 </beans>  

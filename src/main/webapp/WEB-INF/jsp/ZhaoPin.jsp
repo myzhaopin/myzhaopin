@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -76,36 +77,14 @@
         <div class="col-md-12 column right">
             <!--这里应该用ul li来把没一条包起来，动态判断有多少条就显示多少-->
             <div class="row clearfix">
-                <div class="col-md-12 column">
+            <c:forEach items="${jobs }" var="job">
+            <div class="col-md-12 column">
                     <div class="detail">
-                        <h2 class="job">招聘信息1</h2>
-                        <a class="btn btn-default edit" href="ZhaoPinDetail" type="button">查看</a>
+                        <h2 class="job">${job.title }</h2>
+                        <a class="btn btn-default edit" href="ZhaoPinDetail?jobId=${job.jobId }" type="button">查看</a>
                     </div>
                 </div>
-                <div class="col-md-12 column">
-                    <div class="detail">
-                        <h2 class="job">招聘信息2</h2>
-                        <a class="btn btn-default edit" href="ZhaoPinDetail" type="button">查看</a>
-                    </div>
-                </div>
-                <div class="col-md-12 column">
-                    <div class="detail">
-                        <h2 class="job">招聘信息3</h2>
-                        <a class="btn btn-default edit" href="ZhaoPinDetail" type="button">查看</a>
-                    </div>
-                </div>
-                <div class="col-md-12 column">
-                    <div class="detail">
-                        <h2 class="job">招聘信息4</h2>
-                        <a class="btn btn-default edit" href="ZhaoPinDetail" type="button">查看</a>
-                    </div>
-                </div>
-                <div class="col-md-12 column">
-                    <div class="detail">
-                        <h2 class="job">招聘信息5</h2>
-                        <a class="btn btn-default edit" href="ZhaoPinDetail" type="button">查看</a>
-                    </div>
-                </div>
+            </c:forEach>
                 <div class="col-md-12 column">
                     <div class="detail deleteBorder">
                         <a type="button" class="btn edit" href="AddZhaoPin">新&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp增</a>

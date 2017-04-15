@@ -17,7 +17,15 @@ public class Job {
 
     private String information;
 
-    public Integer getJobId() {
+    
+    @Override
+	public String toString() {
+		return "Job [jobId=" + jobId + ", companyId=" + companyId + ", title=" + title + ", salary=" + salary
+				+ ", verify=" + verify + ", date=" + date + ", industryName=" + industryName + ", information="
+				+ information + "]";
+	}
+
+	public Integer getJobId() {
         return jobId;
     }
 

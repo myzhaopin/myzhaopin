@@ -117,7 +117,7 @@
         <div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="home">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                    <a href="Home">回到主页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
                 </li>
             </ul>
         </div>
@@ -133,7 +133,7 @@
 
         <label for="inputPassword" class="sr-only">密码</label>
         <input type="password" id="inputPassword" name="passwd" class="form-control" placeholder="密码" required>
-        <a href="Companylogin.jsp" class="Companylogin">切换到公司登陆</a><div>&nbsp</div>
+        <a href="CompanyLogin" class="Companylogin">切换到公司登陆</a><div>&nbsp</div>
         <div class="bbutton">
             <input class="btn btn-lg btn-primary login" type="submit" value="登录" onclick="">
             <a class="btn btn-lg btn-primary register" href="UserSignup" type="button">注册</a>

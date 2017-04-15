@@ -32,10 +32,23 @@ public class CompanyService {
 		CompanyExample example = new CompanyExample();
 		example.createCriteria().andAccountEqualTo(company.getAccount())
 								.andPasswdEqualTo(company.getPasswd());
-		List<Company> companys = companyDao.selectByExample(example);
+		List<Company> companys = companyDao.selectByExampleWithBLOBs(example);
 		//System.out.println(companys.get(0).getIntrodution());
 		if(1 == companys.size())
 			return companys.get(0);
+		else
+			return null;
+	}
+	
+	public Company updateCompany(Company record)
+	{
+		if(companyDao.updateByPrimaryKeySelective(record) == 1)
+		{
+			CompanyExample example = new CompanyExample();
+			example.createCriteria().andAccountEqualTo(record.getAccount());
+			List<Company> companys = companyDao.selectByExampleWithBLOBs(example);
+			return companys.get(0);
+		}
 		else
 			return null;
 	}
