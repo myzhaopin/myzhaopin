@@ -31,7 +31,7 @@ public class JobController {
         map.put("resumes", resumes);
 
         int id = Integer.parseInt(jobId);
-        Job job = jobService.getJobByjobId(id);
+        Job job = jobService.getJobByJobId(id);
         map.addAttribute("job", job);
 
         int comId = Integer.parseInt(companyId);

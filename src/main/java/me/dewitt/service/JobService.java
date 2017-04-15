@@ -8,9 +8,11 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-
+import me.dewitt.dao.JobDetailMapper;
 import me.dewitt.dao.JobMapper;
 import me.dewitt.pojo.Job;
+import me.dewitt.pojo.JobDetail;
+import me.dewitt.pojo.JobDetailExample;
 import me.dewitt.pojo.JobExample;
 
 @Service
@@ -18,6 +20,9 @@ public class JobService {
 
 	@Resource
 	JobMapper jobDao;
+	
+	@Resource
+	JobDetailMapper jobDetailDao;
 	
 	public boolean insertJob(Job record)
 	{
@@ -45,4 +50,12 @@ public class JobService {
 		else
 			return null;
 	}
+	
+	public List<JobDetail> getAllJobs()
+	{
+		JobDetailExample jobDetail = new JobDetailExample();
+		List<JobDetail> jobDetails = jobDetailDao.selectByExample(jobDetail);
+		return jobDetails;
+	}
+	
 }
