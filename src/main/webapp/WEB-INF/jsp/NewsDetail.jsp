@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <!--<link rel="icon" href="images/favicon.ico">-->
 
-    <title>工作详情</title>
+    <title>查看新闻</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -43,16 +43,10 @@
         }
 
         .butxg {
+            float: right;
+            margin-right: 26px;
             width: 78px;
             height: 26px;
-            background-image: url(images/button_xg.gif);
-            border: 0;
-        }
-
-        .butgo {
-            width: 150px;
-            height: 26px;
-            background-image: url(images/button_go.jpg);
             border: 0;
         }
 
@@ -97,7 +91,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column right">
 
-            <form name="form1" method="post" action="AddZhaoPin">
+            <form name="form1" method="get" action="NewsDetail">
                 <table width="100%" border="0" cellspacing="0">
                     <tr>
                         <td height="30">&nbsp;</td>
@@ -110,7 +104,7 @@
                     <tr>
                         <td width="64" align="center"></td>
                         <td width="771" height="30" align="left" valign="top"><span
-                                class="text_blod_title">新增招聘信息</span></td>
+                                class="text_blod_title">编辑新闻</span></td>
                     </tr>
                     <tr>
                         <td height="15" colspan="2"><img src="images/line1.jpg" width="835" height="6"></td>
@@ -127,36 +121,21 @@
                                 <tr>
                                     <td height="10" colspan="4"></td>
                                 </tr>
-								
+
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1"><label for="workDetail">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</label></td>
-                                    <td width="350" align="left" class="text_cray"><input class="form-control" id="workDetail" type="text" required="required" name="title" value="${job.title }"/></td>
+                                    <td width="120" height="40" align="left" class="text_cray1"><label for="title">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</label></td>
+                                    <td width="350" align="left" class="text_cray"><input class="form-control" id="title" type="text" required="required" name="title"/></td>
 
 
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1"><label for="pay">薪&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资：</label></td>
-                                    <td align="left" class="text_cray"><input class="form-control" id="pay" type="text" required="required" name="salary" value="${job.salary }"></td>
+                                    <td width="120" height="40" align="left" class="text_cray1 intro "><label for="content">内&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;容：</label></td>
+                                    <td align="left" class="text_cray"><textarea id="content" class="form-control" rows="13" cols="45" name="content" required="required"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1 intro"><label for="intro">介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绍：</label></td>
-                                    <td align="left" class="text_cray"><textarea id="intro" class="form-control" rows="13" cols="45" name="information">${job.information }</textarea></td>
+                                    <td width="120" height="40" align="left" class="text_cray1"><label for="image">上&nbsp;传&nbsp;图&nbsp;片：</label></td>
+                                    <td align="left" class="text_cray"><input class="text_cray" id="image" type="file" name="image"/></td>
                                 </tr>
-                                <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1"><label>行业：</label></td>
-                                    <td align="left" class="text_cray">
-                                        ${job.industryName }<select name="industryName" class="form-control">
-                                            <option value ="IT">IT</option>
-                                            <option value ="房地产">房地产</option>
-                                            <option value="教育">教育</option>
-                                            <option value="旅游">旅游</option>
-                                            <option value="金融">金融</option>
-                                            <option value="餐饮">餐饮</option>
-                                            <option value="其他">其他</option>
-                                        </select>
-                                    </td>
-                                </tr>
-
                             </table>
                             <br>
                             <table width="100%" border="0" cellspacing="0">
@@ -164,12 +143,10 @@
                                     <td></td>
                                 </tr>
                             </table>
-                            <table width="48%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td height="30" align="center"><input name="button" type="submit" class="butxg"
-                                                                          id="button" value="" onClick=""></td>
-                                    <td height="30" align="right"><input name="button" type="button" class="butgo"
-                                                                         value="" onClick="window.location='EmployResumes'"></td>
+                                    <%--<input type="hidden" name="adminId" value="${sessionScope.currUser.adminId}"/>--%>
+                                    <td height="30" align="center"><input type="submit" class="butxg btn-primary" id="button" value="发布" onClick=""></td>
                                 </tr>
                             </table>
                 </table>

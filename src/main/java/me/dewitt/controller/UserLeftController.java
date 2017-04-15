@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by hzg on 2017/4/8.
  */
 @Controller
-public class LeftController {
+public class UserLeftController {
     @RequestMapping(value = "/UserLeft",method = RequestMethod.GET)
-    public String left(String resumeId, ModelMap map) {
+    public String userLeft(String resumeId, ModelMap map) {
 
         return "UserLeft";
     }

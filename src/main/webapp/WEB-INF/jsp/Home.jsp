@@ -226,7 +226,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h2>招聘信息</h2>
-            <table class="table">
+            <table class="table table-hover">
                 <thead>
                 <tr class="info">
                     <th>
@@ -248,7 +248,6 @@
                 </thead>
                 <tbody>
                 <c:forEach items="${jobDetails}" var="item">
-                    <%----%>
                     <tr onclick="location.href='Job?jobId=${item.jobId}&companyId=${item.companyId}'">
                         <td>
                             ${item.title}
@@ -329,16 +328,4 @@
 <script src="js/bootstrap.min.js"></script>
 
 </body>
-<script type="text/javascript">
-    function changeToWelcome() {
-        var username=session.getAttribute("username");
-        if (username!=null){
-            document.getElementById("loginText").innerText="欢迎您，";
-            document.getElementById("loginText").innerText(username);
-        }
-    }
-    window.onload=function () {
-        changeToWelcome();
-    }
-</script>
 </html>
