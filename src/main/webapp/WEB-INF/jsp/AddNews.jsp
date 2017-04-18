@@ -92,7 +92,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column right">
 
-            <form name="form1" method="post" action="AddNews">
+            <form name="form1" method="post" enctype="multipart/form-data" action="AddNews">
                 <table width="100%" border="0" cellspacing="0">
                     <tr>
                         <td height="30">&nbsp;</td>
@@ -135,7 +135,7 @@
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1"><label for="image">上&nbsp;传&nbsp;图&nbsp;片：</label></td>
-                                    <td align="left" class="text_cray"><input class="text_cray" id="image" type="file" name="image"/></td>
+                                    <td align="left" class="text_cray"><input class="text_cray" id="image" type="file" name="picture"/></td>
                                 </tr>
                             </table>
                             <br>

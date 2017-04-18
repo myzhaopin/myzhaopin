@@ -61,6 +61,14 @@
             <mvc:mapping path="/MyResumesDetail"/>  
             <!-- 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 -->  
             <bean class="me.dewitt.other.UserLoginInterceptor"/>  
+        </mvc:interceptor>
+        <mvc:interceptor>  
+            <mvc:mapping path="/CompanyLoginSuccess"/>  
+            <mvc:mapping path="/CompanyDetail"/>  
+            <mvc:mapping path="/Zhaopin"/>  
+            <mvc:mapping path="/EmployResumes"/>  
+            <!-- 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 -->  
+            <bean class="me.dewitt.other.CompanyLoginInterceptor"/>  
         </mvc:interceptor>  
     </mvc:interceptors>  
 

@@ -74,30 +74,10 @@
         <div class="detail">
             <h2 class="job">新闻:${item.title}</h2>
             <a class="btn btn-default edit" href="" type="button">编辑</a>
+            <a class="btn btn-default edit" href="DeleteNews?newsId=${item.idNews }" type="button">删除</a>
         </div>
     </div>
 </c:forEach>
-<div class="col-md-12 column">
-    <div class="detail">
-        <h2 class="job">新闻:</h2>
-        <a class="btn btn-default edit" href="NewsDetail" type="button">编辑</a>
-        <a class="btn btn-default edit" href="" type="button">删除</a>
-    </div>
-</div>
-<div class="col-md-12 column">
-    <div class="detail">
-        <h2 class="job">新闻:</h2>
-        <a class="btn btn-default edit" href="NewsDetail" type="button">编辑</a>
-        <a class="btn btn-default edit" href="" type="button">删除</a>
-    </div>
-</div>
-<div class="col-md-12 column">
-    <div class="detail">
-        <h2 class="job">新闻:</h2>
-        <a class="btn btn-default edit" href="NewsDetail" type="button">编辑</a>
-        <a class="btn btn-default edit" href="" type="button">删除</a>
-    </div>
-</div>
 <div class="col-md-11 column">
     <div class="detail deleteBorder">
         <a type="button" class="btn edit newBtn btn-default" href="AddNews">新建新闻</a>
