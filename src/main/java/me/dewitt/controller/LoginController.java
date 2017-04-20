@@ -1,12 +1,12 @@
 package me.dewitt.controller;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-//import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import me.dewitt.pojo.Company;
@@ -24,7 +24,7 @@ public class LoginController {
 	private CompanyService companyService;
 	
 	@RequestMapping(value="/UserLogin", method=RequestMethod.POST)
-	public String userLogin(User userModel, ModelMap map)
+	public String userLogin(User userModel, ModelMap map,HttpSession session)
 	{
 		User user = userService.getUserByUsernameAndPasswd(userModel);
 		if(user != null)
@@ -35,11 +35,12 @@ public class LoginController {
 		else
 		{
 			//todo:登录失败处理
-			return "";
+			map.addAttribute("loginError","用户名或密码不正确");
+			return "UserLogin";
 		}
 	}
 	@RequestMapping(value="/UserLogin", method=RequestMethod.GET)
-	public String userLogin()
+	public String userLogin(HttpSession session)
 	{
 		return "UserLogin";
 	}

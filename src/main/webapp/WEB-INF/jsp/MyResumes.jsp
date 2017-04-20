@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -23,10 +23,11 @@
     <![endif]-->
 
     <style type="text/css">
-        body{
+        body {
             overflow-y: hidden;
             overflow-x: hidden;
         }
+
         .btn {
             float: right;
         }
@@ -61,7 +62,7 @@
             text-align: center;
         }
 
-        .deleteBorder{
+        .deleteBorder {
             border: 0px;
         }
     </style>
@@ -70,12 +71,12 @@
 
 <body>
 <c:forEach items="${resumes }" var="item">
-<div class="col-md-12 column">
-    <div class="detail">
-        <h2 class="job">简历:${item.profession}</h2>
-        <a class="btn btn-default edit" href="MyResumeDetail?resumeId=${item.resumeId }" type="button">编辑</a>
+    <div class="col-md-12 column">
+        <div class="detail">
+            <h2 class="job">简历:${item.profession}</h2>
+            <a class="btn btn-default edit" href="MyResumeDetail?resumeId=${item.resumeId }" type="button">编辑</a>
+        </div>
     </div>
-</div>
 </c:forEach>
 <div class="col-md-11 column">
     <div class="detail deleteBorder">

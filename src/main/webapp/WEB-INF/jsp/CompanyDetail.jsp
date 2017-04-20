@@ -35,7 +35,7 @@
         }
 
         .container {
-            margin-top: 80px;
+            margin-top: 50px;
         }
 
         .butxg {
@@ -88,15 +88,7 @@
         <div class="col-md-8 column right">
 
             <form name="form1" method="post" action="CompanyDetail">
-                <table width="100%" border="0" cellspacing="0">
-                    <tr>
-                        <td height="30">&nbsp;</td>
-                    </tr>
-                </table>
                 <table width="835" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td height="20" colspan="2" align="center"></td>
-                    </tr>
                     <tr>
                         <td width="64" align="center"></td>
                         <td width="771" height="30" align="left" valign="top"><span
@@ -122,10 +114,10 @@
                                     <td width="60" height="40" align="left" class="text_cray1">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</td>
                                     <td align="left" class="text_cray"><input class="form-control" type="text" name="account" readonly="true" required="required" value="${sessionScope.currCompany.account }"></td>
                                 </tr>
-                                <%--<tr>--%>
-                                    <%--<td width="100" height="40" align="left" class="text_cray1">密 码：</td>--%>
-                                    <%--<td align="left" class="text_cray"></td>--%>
-                                <%--</tr>--%>
+                                <tr>
+                                    <td width="100" height="40" align="left" class="text_cray1">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="password" name="passwd"></td>
+                                </tr>
                                 <input class="form-control" type="hidden" name="companyId" required="required" value="${sessionScope.currCompany.companyId }">
                                 <tr>
                                     <td width="70" height="40" align="left" class="text_cray1">公&nbsp;&nbsp;司&nbsp;&nbsp;名：</td>

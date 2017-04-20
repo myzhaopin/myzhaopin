@@ -91,16 +91,8 @@
     <div class="row clearfix">
         <div class="col-md-12 column right">
 
-            <form name="form1" method="get" action="NewsDetail">
-                <table width="100%" border="0" cellspacing="0">
-                    <tr>
-                        <td height="30">&nbsp;</td>
-                    </tr>
-                </table>
+            <form name="form1" method="post" enctype="multipart/form-data" action="NewsDetail">
                 <table width="835" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td height="20" colspan="2" align="center"></td>
-                    </tr>
                     <tr>
                         <td width="64" align="center"></td>
                         <td width="771" height="30" align="left" valign="top"><span
@@ -124,17 +116,21 @@
 
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1"><label for="title">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</label></td>
-                                    <td width="350" align="left" class="text_cray"><input class="form-control" id="title" type="text" required="required" name="title"/></td>
+                                    <td width="350" align="left" class="text_cray"><input class="form-control" id="title" type="text" required="required" name="title" value="${news.title}"/></td>
 
 
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1 intro "><label for="content">内&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;容：</label></td>
-                                    <td align="left" class="text_cray"><textarea id="content" class="form-control" rows="13" cols="45" name="content" required="required"></textarea></td>
+                                    <td align="left" class="text_cray"><textarea id="content" class="form-control" rows="13" cols="45" name="content" required="required">${news.content}</textarea></td>
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1"><label for="image">上&nbsp;传&nbsp;图&nbsp;片：</label></td>
-                                    <td align="left" class="text_cray"><input class="text_cray" id="image" type="file" name="image"/></td>
+                                    <td width="120" height="40" align="left" class="text_cray1"><label for="image">图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;片：</label></td>
+                                    <td align="left" class="text_cray"><img src="${news.image}" id="image" style="width:740.8px;height:430.4px;"></td>
+                                </tr>
+                                <tr>
+                                    <td width="120" height="40" align="left" class="text_cray1"><label for="changeImage">更&nbsp;改&nbsp;图&nbsp;片：</label></td>
+                                    <td align="left" class="text_cray"><input class="text_cray" id="changeImage" type="file" name="picture"/></td>
                                 </tr>
                             </table>
                             <br>
@@ -145,8 +141,7 @@
                             </table>
                             <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <%--<input type="hidden" name="adminId" value="${sessionScope.currUser.adminId}"/>--%>
-                                    <td height="30" align="center"><input type="submit" class="butxg btn-primary" id="button" value="发布" onClick=""></td>
+                                    <td height="30" align="center"><input type="submit" class="butxg btn-primary" id="button" value="发布"></td>
                                 </tr>
                             </table>
                 </table>
@@ -160,6 +155,7 @@
                         <td height="2" background="images/bottom_point.gif"></td>
                     </tr>
                 </table>
+                <input type="hidden" name="idNews" value="${news.idNews}" />
             </form>
         </div>
     </div>
@@ -167,7 +163,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 </body>

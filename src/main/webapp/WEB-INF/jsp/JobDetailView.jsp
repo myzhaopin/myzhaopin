@@ -86,7 +86,7 @@
 <body>
 <div class="col-md-12 column right">
 
-    <form name="form1" method="post">
+    <form name="form1" method="post" action="MyResumeDetail">
         <table width="100%" border="0" cellspacing="0">
             <tr>
                 <td height="30">&nbsp;</td>
@@ -152,16 +152,7 @@
                             <td></td>
                         </tr>
                     </table>
-                    <table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td height="30" align="left">
-                                <a href="VerifyJob?jobId=${job.jobId}&verify=true"><input class="butxg pass btn-primary"
-                                                                                            value="审核通过"></a>
-                                <a href="JobNotVerify"><input class="butxg nopass btn-primary"
-                                        value="审核不通过"></a>
-                            </td>
-                        </tr>
-                    </table>
+
         </table>
         <table width="100%" border="0" cellspacing="0">
             <tr>

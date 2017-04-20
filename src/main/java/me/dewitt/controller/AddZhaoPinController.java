@@ -20,26 +20,24 @@ import me.dewitt.service.JobService;
 @SessionAttributes("currCompany")
 public class AddZhaoPinController {
 
-	@Resource
-	JobService jobService;
-	
-    @RequestMapping(value = "/AddZhaoPin", method = RequestMethod.GET)
-    public String left(String resumeId, ModelMap map) {
+    @Resource
+    JobService jobService;
 
+    @RequestMapping(value = "/AddZhaoPin", method = RequestMethod.GET)
+    public String left(@ModelAttribute("currCompany") Company currCompany, ModelMap map) {
+        map.put("currCompany", currCompany);
         return "AddZhaoPin";
     }
-    
+
     @RequestMapping(value = "/AddZhaoPin", method = RequestMethod.POST)
-    public String addJob(@ModelAttribute("currCompany")Company currCompany, Job job, ModelMap map)
-    {
-    	job.setCompanyId(currCompany.getCompanyId());
-    	System.out.println(job);
-    	if(jobService.insertJob(job))
-    		return "redirect:ZhaoPin";
-    	else
-    	{
-    		//todo:插入失败处理
-    		return "";
-    	}
+    public String addJob(@ModelAttribute("currCompany") Company currCompany, Job job, ModelMap map) {
+        job.setCompanyId(currCompany.getCompanyId());
+        System.out.println(job);
+        if (jobService.insertJob(job))
+            return "redirect:ZhaoPin";
+        else {
+            //todo:插入失败处理
+            return "";
+        }
     }
 }

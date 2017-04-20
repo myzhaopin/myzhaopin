@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="zh-CN">
 <head>
@@ -97,7 +98,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column right">
 
-            <form name="form1" method="post">
+            <form name="form1" method="post" action="ZhaoPinDetail">
                 <table width="100%" border="0" cellspacing="0">
                     <tr>
                         <td height="30">&nbsp;</td>
@@ -136,19 +137,36 @@
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1">薪 资：</td>
-                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="pay" required="required" value="${job.salary }"></td>
+                                    <td align="left" class="text_cray"><input class="form-control" type="text" name="salary" required="required" value="${job.salary }"></td>
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1 intro">简 介：</td>
-                                    <td align="left" class="text_cray"><textarea id="intro" class="form-group" rows="13" cols="45" name="information">${job.information }</textarea></td>
+                                    <td align="left" class="text_cray"><textarea id="intro" class="form-control" rows="13" cols="45" name="information">${job.information }</textarea></td>
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1">行业：</td>
-                                    <td align="left" class="text_cray">${job.industryName }</td>
+                                    <td width="120" height="40" align="left" class="text_cray1 intro">行业：</td>
+                                    <td align="left" class="text_cray">
+                                        <select id="industryName" name="industryName" class="form-control">
+                                            <option value ="IT">IT</option>
+                                            <option value ="房地产">房地产</option>
+                                            <option value="教育">教育</option>
+                                            <option value="旅游">旅游</option>
+                                            <option value="金融">金融</option>
+                                            <option value="餐饮">餐饮</option>
+                                            <option value="其他">其他</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td width="120" height="40" align="left" class="text_cray1">是否通过审核：</td>
-                                    <td align="left" class="text_cray">${job.verify }</td>
+                                    <c:if test="${job.verify==true}">
+                                        <td align="left" class="text_cray"><input readonly class="form-control" type="text" value="是"/></td>
+                                        <input type="hidden" name="verify" value="true"/>
+                                    </c:if>
+                                    <c:if test="${job.verify==false}">
+                                        <td align="left" class="text_cray"><input readonly class="form-control" type="text" value="否"/></td>
+                                        <input type="hidden" name="verify" value="false"/>
+                                    </c:if>
                                 </tr>
 
                             </table>
@@ -163,7 +181,7 @@
                                     <td height="30" align="center"><input name="button" type="submit" class="butxg"
                                                                           id="button" value="" onClick=""></td>
                                     <td height="30" align="right"><input name="button" type="button" class="butgo"
-                                                                         value="" onClick="window.location='EmployResumes?jobId=${job.jobId}'"></td>
+                                                                         value="" onClick="window.location='EmployResumesByJobId?jobId=${job.jobId}'"></td>
                                 </tr>
                             </table>
                 </table>
@@ -177,6 +195,8 @@
                         <td height="2" background="images/bottom_point.gif"></td>
                     </tr>
                 </table>
+                <input type="hidden" name="jobId" value="${job.jobId}"/>
+                <input type="hidden" name="companyId" value="${currCompany.companyId}"/>
             </form>
         </div>
     </div>
@@ -184,8 +204,15 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 </body>
+
+<script>
+    //根据industryName选中
+    $(document).ready(function () {
+        $("#industryName option[value='${job.industryName}").attr('selected', true);
+    });
+</script>
 </html>

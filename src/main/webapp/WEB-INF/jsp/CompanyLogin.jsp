@@ -152,22 +152,21 @@
         <!-- Toolbar -->
         <div id="wyu-footer-notes">
             <div class="addr">
-                <p>版权所有&copy;五邑大学&nbsp;&nbsp;
-                    地址：广东江门市东成村22号&nbsp;&nbsp;
-                    邮编：529020&nbsp;&nbsp;
-                    五邑大学党政办：(0750)3296113&nbsp;&nbsp;
-                    传真：(0750)3358395&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p>版权所有&copy;XX公司&nbsp;&nbsp;
+                    地址：XXXXXXXXXXX22号&nbsp;&nbsp;
+                    邮编：XXXXXX&nbsp;&nbsp;
+                    联系电话：(0750)8888888&nbsp;&nbsp;
+                    传真：(0750)888888&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     粤ICP备15096031号</p>
-                <p><a href="#" target="_self">招生咨询</a>&nbsp;&nbsp;全日制本科招生咨询：(0750)3296263，3296265&nbsp;&nbsp;
-                    网络管理中心：(0750)3296114&nbsp;&nbsp;
-                    校长信箱：<a href="mailto:wyuxfyx@126.com">wyuxfyx@126.com</a></p>
+                <p><a href="zszx.html" target="_self">XX咨询</a>&nbsp;&nbsp;XXXXXXXXXXX咨询：(0750)3296263，3296265&nbsp;&nbsp;
+                    网络管理中心：(0750)666666&nbsp;&nbsp;
+                    董事长信箱：<a href="mailto:wyuxfyx@126.com">xxxxxxx@126.com</a></p>
             </div>
         </div>
         <!-- /Toolbar -->
     </div>
     <!-- /Footnotes -->
 </footer>
-
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

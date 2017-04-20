@@ -127,33 +127,45 @@
                                 <tr>
                                     <td height="10" colspan="4"></td>
                                 </tr>
-								
+
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1"><label for="workDetail">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</label></td>
-                                    <td width="350" align="left" class="text_cray"><input class="form-control" id="workDetail" type="text" required="required" name="title" value="${job.title }"/></td>
+                                    <td width="120" height="40" align="left" class="text_cray1"><label for="workDetail">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</label>
+                                    </td>
+                                    <td width="350" align="left" class="text_cray"><input class="form-control"
+                                                                                          id="workDetail" type="text"
+                                                                                          required="required"
+                                                                                          name="title"
+                                                                                          value="${job.title }"/></td>
 
 
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1"><label for="pay">薪&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资：</label></td>
-                                    <td align="left" class="text_cray"><input class="form-control" id="pay" type="text" required="required" name="salary" value="${job.salary }"></td>
+                                    <td width="120" height="40" align="left" class="text_cray1"><label for="pay">薪&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资：</label>
+                                    </td>
+                                    <td align="left" class="text_cray"><input class="form-control" id="pay"
+                                                                              required="required" name="salary"
+                                                                              value="${job.salary }"></td>
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1 intro"><label for="intro">介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绍：</label></td>
-                                    <td align="left" class="text_cray"><textarea id="intro" class="form-control" rows="13" cols="45" name="information">${job.information }</textarea></td>
+                                    <td width="120" height="40" align="left" class="text_cray1 intro"><label
+                                            for="intro">介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绍：</label></td>
+                                    <td align="left" class="text_cray"><textarea id="intro" class="form-control"
+                                                                                 rows="13" cols="45"
+                                                                                 name="information">${job.information }</textarea>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td width="120" height="40" align="left" class="text_cray1"><label>行业：</label></td>
+                                    <td width="120" height="40" align="left" class="text_cray1 intro"><label>行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</label></td>
                                     <td align="left" class="text_cray">
-                                        ${job.industryName }<select name="industryName" class="form-control">
-                                            <option value ="IT">IT</option>
-                                            <option value ="房地产">房地产</option>
-                                            <option value="教育">教育</option>
-                                            <option value="旅游">旅游</option>
-                                            <option value="金融">金融</option>
-                                            <option value="餐饮">餐饮</option>
-                                            <option value="其他">其他</option>
-                                        </select>
+                                    <select id="industryName" name="industryName" class="form-control">
+                                        <option value="IT">IT</option>
+                                        <option value="房地产">房地产</option>
+                                        <option value="教育">教育</option>
+                                        <option value="旅游">旅游</option>
+                                        <option value="金融">金融</option>
+                                        <option value="餐饮">餐饮</option>
+                                        <option value="其他">其他</option>
+                                    </select>
                                     </td>
                                 </tr>
 
@@ -166,10 +178,11 @@
                             </table>
                             <table width="48%" border="0" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td height="30" align="center"><input name="button" type="submit" class="butxg"
+                                    <td height="30" align="center"><input type="submit" class="butxg"
                                                                           id="button" value="" onClick=""></td>
-                                    <td height="30" align="right"><input name="button" type="button" class="butgo"
-                                                                         value="" onClick="window.location='EmployResumes'"></td>
+                                    <td height="30" align="right"><input type="button" class="butgo"
+                                                                         value=""
+                                                                         onClick="window.location='EmployResumes'"></td>
                                 </tr>
                             </table>
                 </table>
@@ -183,6 +196,7 @@
                         <td height="2" background="images/bottom_point.gif"></td>
                     </tr>
                 </table>
+                <input type="hidden" name="companyId" value="${currCompany.companyId}"/>
             </form>
         </div>
     </div>
@@ -190,7 +204,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 </body>

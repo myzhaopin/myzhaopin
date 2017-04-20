@@ -66,40 +66,24 @@
 </head>
 
 <body>
-<c:forEach items="" var="item">
+<c:if test="${jobs==null}">
+    <div class="col-md-12 column">
+        <h1>暂时没有已审核的工作</h1>
+    </div>
+</c:if>
+<c:forEach items="${jobs}" var="item">
     <div class="col-md-12 column">
         <div class="detail">
-            <h2 class="job">工作:</h2>
-            <a class="btn btn-default edit" href="" type="button">查看</a>
-            <a class="btn btn-default edit" href="" type="button">删除</a>
+            <h2 class="job">工作:${item.title}</h2>
+            <a class="btn btn-default edit" href="JobDetailView?jobId=${item.jobId}" type="button">查看</a>
+            <a class="btn btn-default edit" href="DeleteJob?jobId=${item.jobId}" type="button">删除</a>
         </div>
     </div>
 </c:forEach>
-<div class="col-md-12 column">
-    <div class="detail">
-        <h2 class="job">工作:</h2>
-        <a class="btn btn-default edit" href="" type="button">查看</a>
-        <a class="btn btn-default edit" href="" type="button">删除</a>
-    </div>
-</div>
-<div class="col-md-12 column">
-    <div class="detail">
-        <h2 class="job">工作:</h2>
-        <a class="btn btn-default edit" href="" type="button">查看</a>
-        <a class="btn btn-default edit" href="" type="button">删除</a>
-    </div>
-</div>
-<div class="col-md-12 column">
-    <div class="detail">
-        <h2 class="job">工作:</h2>
-        <a class="btn btn-default edit" href="" type="button">查看</a>
-        <a class="btn btn-default edit" href="" type="button">删除</a>
-    </div>
-</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 </body>

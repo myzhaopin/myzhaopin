@@ -23,10 +23,11 @@
     <![endif]-->
 
     <style type="text/css">
-        body{
+        body {
             overflow-y: hidden;
             overflow-x: hidden;
         }
+
         .btn {
             float: right;
         }
@@ -61,18 +62,28 @@
 </head>
 
 <body>
-<c:forEach items="${resumes }" var="resume">
-<div class="col-md-11 column">
-    <div class="detail">
-        <h2 class="job">${resume.name }:${resume.profession }</h2>
-        <a class="btn btn-default edit" href="ResumeDetail?resumeId=${resume.resumeId }" type="button">查看</a>
+<c:if test="${resumes==null}">
+    <div class="col-md-12 column">
+        <h1>暂时没有求职信息</h1>
     </div>
-</div>
+</c:if>
+<c:if test="${job!=null}">
+    <div class="col-md-12 column">
+        <h3>应聘${job.title}的简历有：</h3>
+    </div>
+</c:if>
+<c:forEach items="${resumes }" var="resume">
+    <div class="col-md-12 column">
+        <div class="detail">
+            <h2 class="job">${resume.name }:${resume.profession }</h2>
+            <a class="btn btn-default edit" href="ResumeDetail?resumeId=${resume.resumeId }" type="button">查看</a>
+        </div>
+    </div>
 </c:forEach>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 </body>

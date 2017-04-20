@@ -3,15 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title>Title</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             overflow-y: hidden;
-            overflow-x: hidden;
-        }
-
-        .CompanyData, .jobData,.checkZhaopin, .loginOut {
-            font-size: 20px;
-            line-height: 90px;
         }
 
         .list_item_bot .li_b_l span {
@@ -22,23 +17,35 @@
             padding: 0 5px;
         }
 
-        .left {
-            margin-top: 70px;
-            margin-bottom: 10px;
+        .first{
+            margin-top: 30px;
         }
 
-        footer {
-            text-align: center;
+        .left {
+            border: 0px solid #dcdcdc;
+            min-height: 450px;
+        }
+
+        .btn {
+            margin-bottom: 15px;
+            width: 195px;
         }
 
     </style>
 </head>
 <body>
 <div class="left">
-    <div><a href="CompanyDetail" class="CompanyData" target="iframe_right">企业信息</a></div>
-    <div><a href="ZhaoPin" class="jobData" target="iframe_right">招聘信息</a></div>
-    <div><a href="EmployResumes" class="checkZhaopin" target="iframe_right">查看求职信息</a></div>
-    <div><a href="#" class="loginOut">退出</a></div>
+    <div><a href="CompanyDetail" target="iframe_right">
+        <button type="button" class="btn btn-primary btn-lg first">企业信息</button>
+    </a></div>
+    <div><a href="ZhaoPin" target="iframe_right">
+        <button type="button" class="btn btn-primary btn-lg">招聘信息</button>
+    </a></div>
+    <div><a href="EmployResumes" class="updateData" target="iframe_right">
+        <button type="button" class="btn btn-primary btn-lg">查看求职信息</button>
+    </a></div>
+
+    <div><a href="Left" class="loginOut" target="_parent"><button type="button" class="btn btn-primary btn-lg">退出</button></a></div>
 </div>
 </body>
 </html>

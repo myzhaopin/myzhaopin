@@ -3,25 +3,35 @@
 <head>
     <meta charset="utf-8">
     <title>Title</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body{
+        body {
             overflow-y: hidden;
         }
+
         .left {
-            border: 1px solid #dcdcdc;
+            border: 0px solid #dcdcdc;
             min-height: 450px;
         }
-        .updateData, .MyData, .loginOut {
-            font-size: 35px;
-            line-height: 90px;
+
+        .first{
+            margin-top: 10px;
+        }
+        .btn {
+            margin-bottom: 15px;
+            width: 195px;
         }
     </style>
 </head>
 <body>
 <div class="left">
-    <div><a href="MyData" class="updateData" target="iframe_right">修改资料</a></div>
-    <div><a href="MyResumes" class="MyData" target="iframe_right">我的简历</a></div>
-    <div><a href="#" class="loginOut">退出</a></div>
+    <div><a href="MyData" target="iframe_right">
+        <button type="button" class="btn btn-primary btn-lg first">修改资料</button>
+    </a></div>
+    <div><a href="MyResumes" target="iframe_right">
+        <button type="button" class="btn btn-primary btn-lg">我的简历</button>
+    </a></div>
+    <div><a href="Left" class="loginOut" target="_parent"><button type="button" class="btn btn-primary btn-lg">退出</button></a></div>
 </div>
 </body>
 </html>

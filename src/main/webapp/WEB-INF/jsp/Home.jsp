@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>五邑大学招聘系统</title>
+    <title>招聘系统</title>
     <link rel="icon" href="images/favicon.ico">
 
     <!-- Bootstrap -->
@@ -82,6 +82,10 @@
         footer {
             text-align: center;
         }
+
+        .navbar-header {
+            margin-top: 12px;
+        }
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -92,14 +96,10 @@
     <![endif]-->
 </head>
 <body>
-
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <!--<a class="navbar-brand" href="#">-->
-            <!--<img alt="Brand" src="../images/logo.png">-->
-            <!--</a>-->
-            <img alt="Brand" src="images/logo.png">
+            <img alt="Brand" src="images/favicon.ico">
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <c:if test="${sessionScope.currUser == null && sessionScope.currCompany == null}">
@@ -151,39 +151,27 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img alt="" src="images/default.jpg"/>
+                        <a href="NewsView?newsId=${news1.idNews}"><img alt="" src="${news1.image}" style="width:926px;height:400px;"></a>
                         <div class="carousel-caption">
                             <h4>
-                                First Thumbnail label
+                                ${news1.title}
                             </h4>
-                            <p>
-                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                            </p>
                         </div>
                     </div>
                     <div class="item">
-                        <img alt="" src="images/default.jpg"/>
+                        <a href="NewsView?newsId=${news2.idNews}"><img alt="" src="${news2.image}" style="width:926px;height:400px;"/></a>
                         <div class="carousel-caption">
                             <h4>
-                                Second Thumbnail label
+                                ${news2.title}
                             </h4>
-                            <p>
-                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                            </p>
                         </div>
                     </div>
                     <div class="item">
-                        <img alt="" src="images/default.jpg"/>
+                        <a href="NewsView?newsId=${news3.idNews}"><img alt="" src="${news3.image}" style="width:926px;height:400px;"/></a>
                         <div class="carousel-caption">
                             <h4>
-                                Third Thumbnail label
+                                ${news3.title}
                             </h4>
-                            <p>
-                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -202,12 +190,7 @@
                 招聘信息简介
             </h1>
             <p>
-                This is a template for a simple marketing or informational website. It includes a large callout
-                called the hero unit and three supporting pieces of content. Use it as a starting point to create
-                something more unique.
-            </p>
-            <p>
-                <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                XX招聘是全国性权威人才网站,为求职者提供最新最全的招聘信息,为企业提供网络招聘,校园招聘,猎头,培训,测评和人事外包等一站式专业人力资源服务.好工作上智联招聘.覆盖全国200多个城市,为求职者提供最准确,最全面的职位招聘信息,找工作信息,求职信息,最新人才招聘信息,为企业提供人才招聘、猎头、培训、测评和人事外包.
             </p>
         </div>
     </div>
@@ -215,11 +198,11 @@
         <div class="column col-md-3 lleft">
             <div class="jobs">
                 <h2>技术</h2>
-                <a href="#">java</a>
-                <a href="#">java</a>
-                <a href="#">java</a>
-                <a href="#">java</a>
-                <a href="#">java</a>
+                <a href="#">java</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">PHP</a><div></div>
+                <a href="#">C++</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">Android</a><div></div>
+                <a href="#">iOS</a>
             </div>
         </div>
         <div class="column col-md-9 rright">
@@ -259,19 +242,19 @@
                 <c:forEach items="${jobDetails}" var="item">
                     <tr onclick="location.href='Job?jobId=${item.jobId}&companyId=${item.companyId}'">
                         <td>
-                            ${item.title}
+                                ${item.title}
                         </td>
                         <td>
-                            ${item.companyName}
+                                ${item.companyName}
                         </td>
                         <td>
-                            ${item.location}
+                                ${item.location}
                         </td>
                         <td>
-                            ${item.salary}
+                                ${item.salary}
                         </td>
                         <td>
-                            ${item.date}
+                                ${item.date}
                         </td>
                     </tr>
                 </c:forEach>
@@ -281,31 +264,31 @@
         </div>
     </div>
 
-    <div class="pageNum">
-        <ul class="pagination">
-            <li>
-                <a href="#"><<</a>
-            </li>
-            <li>
-                <a href="#">1</a>
-            </li>
-            <li>
-                <a href="#">2</a>
-            </li>
-            <li>
-                <a href="#">3</a>
-            </li>
-            <li>
-                <a href="#">4</a>
-            </li>
-            <li>
-                <a href="#">5</a>
-            </li>
-            <li>
-                <a href="#">>></a>
-            </li>
-        </ul>
-    </div>
+    <%--<div class="pageNum">--%>
+        <%--<ul class="pagination">--%>
+            <%--<li>--%>
+                <%--<a href="#"><<</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a href="#">1</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a href="#">2</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a href="#">3</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a href="#">4</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a href="#">5</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a href="#">>></a>--%>
+            <%--</li>--%>
+        <%--</ul>--%>
+    <%--</div>--%>
 
 </div>
 
@@ -315,15 +298,15 @@
         <!-- Toolbar -->
         <div id="wyu-footer-notes">
             <div class="addr">
-                <p>版权所有&copy;五邑大学&nbsp;&nbsp;
-                    地址：广东江门市东成村22号&nbsp;&nbsp;
-                    邮编：529020&nbsp;&nbsp;
-                    五邑大学党政办：(0750)3296113&nbsp;&nbsp;
-                    传真：(0750)3358395&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p>版权所有&copy;XX公司&nbsp;&nbsp;
+                    地址：XXXXXXXXXXX22号&nbsp;&nbsp;
+                    邮编：XXXXXX&nbsp;&nbsp;
+                    联系电话：(0750)8888888&nbsp;&nbsp;
+                    传真：(0750)888888&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     粤ICP备15096031号</p>
-                <p><a href="zszx.html" target="_self">招生咨询</a>&nbsp;&nbsp;全日制本科招生咨询：(0750)3296263，3296265&nbsp;&nbsp;
-                    网络管理中心：(0750)3296114&nbsp;&nbsp;
-                    校长信箱：<a href="mailto:wyuxfyx@126.com">wyuxfyx@126.com</a></p>
+                <p><a href="zszx.html" target="_self">XX咨询</a>&nbsp;&nbsp;XXXXXXXXXXX咨询：(0750)3296263，3296265&nbsp;&nbsp;
+                    网络管理中心：(0750)666666&nbsp;&nbsp;
+                    董事长信箱：<a href="mailto:wyuxfyx@126.com">xxxxxxx@126.com</a></p>
             </div>
         </div>
         <!-- /Toolbar -->
@@ -332,7 +315,7 @@
 </footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 

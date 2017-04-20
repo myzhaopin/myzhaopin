@@ -209,7 +209,7 @@
                     </table>
                     <table width="263" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td height="30" align="center"><input name="button" type="submit" class="butxg"
+                            <td height="30" align="center"><input type="submit" class="butxg"
                                                                   id="button" value="" onClick=""></td>
                         </tr>
                     </table>
@@ -234,7 +234,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 </body>

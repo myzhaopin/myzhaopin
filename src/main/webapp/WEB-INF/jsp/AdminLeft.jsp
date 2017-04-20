@@ -37,7 +37,7 @@
     <div><a href="JobVerified" class="updateData" target="iframe_right">
         <button type="button" class="btn btn-primary btn-lg">已审核工作</button>
     </a></div>
-    <div><a href="#" class="loginOut"><button type="button" class="btn btn-primary btn-lg">退出</button></a></div>
+    <div><a href="Left" class="loginOut" target="_parent"><button type="button" class="btn btn-primary btn-lg">退出</button></a></div>
 </div>
 </body>
 </html>

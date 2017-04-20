@@ -72,8 +72,8 @@
 <c:forEach items="${news}" var="item">
     <div class="col-md-12 column">
         <div class="detail">
-            <h2 class="job">新闻:${item.title}</h2>
-            <a class="btn btn-default edit" href="" type="button">编辑</a>
+            <h4 class="job">新闻:${item.title}</h4>
+            <a class="btn btn-default edit" href="NewsDetail?newsId=${item.idNews }" type="button">编辑</a>
             <a class="btn btn-default edit" href="DeleteNews?newsId=${item.idNews }" type="button">删除</a>
         </div>
     </div>
@@ -86,7 +86,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 </body>

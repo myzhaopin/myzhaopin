@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -23,10 +23,11 @@
     <![endif]-->
 
     <style type="text/css">
-        body{
+        body {
             overflow-x: hidden;
             overflow-y: hidden;
         }
+
         .btn {
             float: right;
         }
@@ -34,10 +35,10 @@
         .job {
             float: left;
             margin-left: 10px;
-            color:#2b542c;
+            color: #2b542c;
         }
 
-        .edit{
+        .edit {
             float: right;
             margin-top: 20px;
             margin-right: 30px;
@@ -46,11 +47,11 @@
 
         .detail {
             border: 1px solid #ededed;
-            margin: 0 0 20px 0;
+            margin: 5px 0 20px 0;
             min-height: 70px;
         }
 
-        .deleteBorder{
+        .deleteBorder {
             border: 0px;
         }
 
@@ -62,43 +63,36 @@
             padding: 0 5px;
         }
 
-        .container {
-            margin-top: 80px;
-        }
-
-
     </style>
 
 </head>
 
 <body>
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column right">
-            <!--这里应该用ul li来把没一条包起来，动态判断有多少条就显示多少-->
-            <div class="row clearfix">
-            <c:forEach items="${jobs }" var="job">
-            <div class="col-md-12 column">
-                    <div class="detail">
-                        <h2 class="job">${job.title }</h2>
-                        <a class="btn btn-default edit" href="ZhaoPinDetail?jobId=${job.jobId }" type="button">查看</a>
-                    </div>
-                </div>
-            </c:forEach>
-                <div class="col-md-12 column">
-                    <div class="detail deleteBorder">
-                        <a type="button" class="btn edit" href="AddZhaoPin">新&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp增</a>
-                    </div>
-                </div>
-            </div>
+<!--这里应该用ul li来把没一条包起来，动态判断有多少条就显示多少-->
+<c:if test="${jobs==null}">
+    <div class="col-md-12 column">
+        <h1>暂时没有招聘信息</h1>
+    </div>
+</c:if>
+<c:forEach items="${jobs }" var="job">
+    <div class="col-md-12 column">
+        <div class="detail">
+            <h2 class="job">${job.title }</h2>
+            <a class="btn btn-default edit" href="ZhaoPinDetail?jobId=${job.jobId }"
+               type="button">查看</a>
         </div>
+    </div>
+</c:forEach>
+<div class="col-md-12 column">
+    <div class="detail deleteBorder">
+        <a type="button" class="btn edit" href="AddZhaoPin">新&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp增</a>
     </div>
 </div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 </body>
